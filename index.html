@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>CodePen - Mo bile UI preview tool</title>
+    <title>Ello - report</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -14,7 +14,30 @@
   <body>
     <div class="container">
       <div class="row">
-        <div class="col-7"></div>
+        <div class="col-12" style="text-align: center;">
+          <h1>ELLO MOBILE APP REPORT</h1>
+          <hr />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-7">
+          <div class="spacer s2"></div>
+          <div id="reveal1">
+            <p>
+              First main view
+            </p>
+            <span>This is the view showed when the app starts.</span> <br />
+            <small>(scroll phone to start)</small>
+          </div>
+
+          <div id="reveal2">
+            <p>
+              Wenas
+            </p>
+            <span>This is the view showed when the app starts.</span> <br />
+          </div>
+          <div class="spacer s2"></div>
+        </div>
         <div class="col-5">
           <div id="inner_wrap">
             <!--The Main Thing-->
@@ -26,16 +49,51 @@
               >
                 <div id="frame_1" class="row">
                   <div class="col-12">
-                    <img src="./imgs/1.PNG" style="width: 360px;" alt="" />
+                    <img
+                      id="img1"
+                      src="./imgs/1.PNG"
+                      style="width: 360px;"
+                      alt=""
+                    />
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-12">
-                    <img src="./imgs/2.PNG" style="width: 360px;" alt="" />
+                    <img
+                      id="img2"
+                      src="./imgs/2.PNG"
+                      style="width: 360px;"
+                      alt=""
+                    />
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="staticBackdrop"
+      data-backdrop="static"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+          <div class="modal-body mx-auto">
+            <button
+              id="scenesButton"
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Start report
+            </button>
           </div>
         </div>
       </div>
