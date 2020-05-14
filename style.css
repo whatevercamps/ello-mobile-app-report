@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,300");
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono&family=Open+Sans:wght@300;400&display=swap");
 
 html {
   height: 100%;
@@ -6,9 +6,25 @@ html {
 
 body {
   font-family: "Open Sans", sans-serif;
-  height: 100%;
+  font-weight: 300;
   background: #1b1b1b;
   color: #eee;
+  -ms-overflow-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "DM Mono", monospace;
+}
+
+.left {
+  text-align: left;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 hr {
@@ -21,7 +37,7 @@ hr {
 }
 
 p {
-  font-size: 2rem;
+  font-size: 1.1rem;
 }
 
 #container {
@@ -43,6 +59,23 @@ p {
   -ms-animation: fadein 2s; /* Internet Explorer */
   -o-animation: fadein 2s; /* Opera < 12.1 */
   animation: fadein 2s;
+  -ms-overflow-style: none;
+}
+
+.phone_2 {
+  border: 40px solid #121212;
+  border-width: 55px 7px;
+  border-radius: 40px;
+  margin: 50px auto;
+  overflow: hidden;
+  -ms-overflow-style: none;
+}
+.phone_2::-webkit-scrollbar {
+  display: none;
+}
+
+.phone::-webkit-scrollbar {
+  display: none;
 }
 
 .phone iframe {
@@ -67,6 +100,36 @@ p {
   transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
   box-shadow: 0px 3px 0 #000, 0px 4px 0 #000, 0px 5px 0 #000, 0px 7px 0 #000,
     0px 10px 20px #000;
+}
+
+.phone_2.view_2 {
+  -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  box-shadow: 0px 3px 0 #000, 0px 4px 0 #000, 0px 5px 0 #000, 0px 7px 0 #000,
+    0px 10px 20px #000;
+}
+
+#phone_2 {
+  opacity: 0;
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  -o-transform: scale(0.8);
+  transform: scale(0.8);
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+#phone_2.visible {
+  opacity: 1;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
 }
 
 @-webkit-keyframes rotate {
@@ -183,6 +246,9 @@ p {
   .phone {
     margin: 0 0 0 -70px;
   }
+  .phone_2 {
+    margin: 0 0 0 -70px;
+  }
 }
 
 @media (max-width: 500px) {
@@ -243,26 +309,223 @@ p {
   }
 }
 
-#reveal1,
-#reveal2 {
+.content {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  width: 30vw;
   opacity: 0;
-  -webkit-transform: scale(0.9);
-  -moz-transform: scale(0.9);
-  -ms-transform: scale(0.9);
-  -o-transform: scale(0.9);
-  transform: scale(0.9);
+  z-index: -10;
+  text-align: justify;
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  -o-transform: scale(0.8);
+  transform: scale(0.8);
   -webkit-transition: all 1s ease-in-out;
   -moz-transition: all 1s ease-in-out;
   -ms-transition: all 1s ease-in-out;
   -o-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
 }
-#reveal1.visible,
-#reveal2.visible {
+.content.visible {
+  z-index: 0;
   opacity: 1;
   -webkit-transform: none;
   -moz-transform: none;
   -ms-transform: none;
   -o-transform: none;
   transform: none;
+}
+
+.secTitle {
+  position: absolute;
+  left: auto;
+  opacity: 0;
+  z-index: -10;
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  -o-transform: scale(0.8);
+  transform: scale(0.8);
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.secTitle.visible {
+  z-index: 10;
+  opacity: 1;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
+}
+
+.titles {
+  margin-bottom: 20%;
+}
+
+.colorsList {
+  width: 350px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.colorDiv {
+  margin-bottom: 5px;
+  text-align: center;
+  line-height: 100px;
+  width: 100px;
+  height: 100px;
+  font-size: 1em;
+  color: #1b1b1b;
+}
+
+/* integracion Sidebar  */
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+}
+
+#sidebar {
+  position: sticky;
+  height: 100vh;
+  min-width: 200px;
+  max-width: 200px;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  background-color: #313440;
+  overflow-x: hidden;
+  padding-top: 33px;
+}
+
+#sidebar a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #a6a9bc;
+  display: block;
+}
+
+#sidebar ul li hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 0;
+  border-top: 1px solid #a6a9bc;
+}
+
+#sidebar a#resume:hover {
+  color: #d35b3f;
+}
+
+#sidebar a#projects:hover {
+  color: #65e8e3;
+}
+
+#sidebar a#contact:hover {
+  color: #fcdd4b;
+}
+
+#content {
+  padding: 20px;
+  width: 100%;
+}
+
+/* sidebar css taken from bootstrapious */
+
+#sidebar {
+  transition: all 0.5s scale-up-center;
+}
+
+/* Shrinking the sidebar from 250px to 80px and center aligining its content*/
+#sidebar.active {
+  min-width: 120px;
+  max-width: 120px;
+  text-align: center;
+}
+
+/* Toggling the sidebar header content, hide the big heading [h3] and showing the small heading [strong] and vice versa*/
+#sidebar .sidebar-header strong {
+  display: none;
+}
+#sidebar.active .sidebar-header h3 {
+  display: none;
+}
+
+#sidebar.active * span {
+  display: none;
+}
+#sidebar.active .sidebar-header strong {
+  display: block;
+}
+
+#sidebar ul li a {
+  text-align: left;
+}
+
+#sidebar.active ul li a {
+  padding: 20px 10px;
+  text-align: center;
+  font-size: 0.85em;
+}
+
+#sidebar.active ul li a i {
+  margin-right: 0;
+  display: block;
+  font-size: 1.8em;
+  margin-bottom: 5px;
+}
+
+/* Same dropdown links padding*/
+#sidebar.active ul ul a {
+  padding: 10px !important;
+}
+
+/* Changing the arrow position to bottom center position, 
+ translateX(50%) works with right: 50% 
+ to accurately  center the arrow */
+#sidebar.active .dropdown-toggle::after {
+  top: auto;
+  bottom: 10px;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+  -ms-transform: translateX(50%);
+  transform: translateX(50%);
+}
+
+.modal-body,
+.modal-content {
+  background-color: rgb(29, 29, 29);
+}
+
+#accordion .card {
+  background-color: #1f2025;
+}
+
+#accordion button {
+  color: #ccc;
+  font-family: "DM Mono", monospace;
+  font-weight: bolder;
+}
+
+#accordion button.collapsed {
+  color: #1ae891;
+}
+
+#accordion .card-body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 0.7rem;
+  background-color: #292a31;
 }

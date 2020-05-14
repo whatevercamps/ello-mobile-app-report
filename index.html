@@ -12,63 +12,271 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-12" style="text-align: center;">
-          <h1>ELLO MOBILE APP REPORT</h1>
-          <hr />
+    <div class="wrapper">
+      <nav id="sidebar" class="active">
+        <div class="sidebar-header" style="text-align: center;">
+          <h3 style="margin: 0 auto;">Falcon M.</h3>
+          <h4>APP REPORT</h4>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-7">
-          <div class="spacer s2"></div>
-          <div id="reveal1">
-            <p>
-              First main view
-            </p>
-            <span>This is the view showed when the app starts.</span> <br />
-            <small>(scroll phone to start)</small>
-          </div>
 
-          <div id="reveal2">
-            <p>
-              Wenas
-            </p>
-            <span>This is the view showed when the app starts.</span> <br />
+        <ul class="list-unstyled components">
+          <li>
+            <a id="resume" href="#resume" lang="es"> UI/UX</a>
+            <a id="projects" href="#projects" lang="es">
+              Performance
+            </a>
+          </li>
+          <li>
+            <hr />
+          </li>
+          <li>
+            <a id="contact" href="#contact" lang="es">
+              Librerías
+            </a>
+
+            <a id="contact" href="#contact" lang="es">
+              Generalidades
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div id="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12" style="text-align: center;">
+              <h1>FALCON MESSENGER <small>REPORTE DE APP MÓVIL</small></h1>
+              <hr />
+            </div>
           </div>
-          <div class="spacer s2"></div>
-        </div>
-        <div class="col-5">
-          <div id="inner_wrap">
-            <!--The Main Thing-->
-            <div id="wrapper" style="perspective: 1300px;">
-              <div
-                class="phone view_1"
-                id="phone_1"
-                style="width: 360px; height: 640px; overflow-y: scroll;"
-              >
-                <div id="frame_1" class="row">
-                  <div class="col-12">
-                    <img
-                      id="img1"
-                      src="./imgs/1.PNG"
-                      style="width: 360px;"
-                      alt=""
-                    />
-                  </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="spacer s2"></div>
+              <div class="row titles" style="text-align: left;">
+                <div class="col-12">
+                  <h4 id="uxSecTitle" class="secTitle">Análisis UI/UX</h4>
+                  <h4 id="perfSecTitle" class="secTitle">
+                    Análisis de Performance
+                  </h4>
+                  <h4 id="libSecTitle" class="secTitle">Librerías</h4>
+                  <h4 id="genSecTitle" class="secTitle">Generalidades</h4>
                 </div>
-                <div class="row">
-                  <div class="col-12">
-                    <img
-                      id="img2"
-                      src="./imgs/2.PNG"
-                      style="width: 360px;"
-                      alt=""
-                    />
+              </div>
+              <div class="row sections">
+                <div class="col-12">
+                  <!-- Estilo -->
+                  <div id="reveal1" class="content">
+                    <h3 class="left">
+                      Colores y fuentes
+                    </h3>
+                    <p>
+                      En general el manejo de los colores está bien ya que se
+                      resaltan bien en modo oscuro y claro. El estilo de letra
+                      es claro y el tamaño adecuado.
+                    </p>
+                    <br />
+                    <div class="colorsList">
+                      <div class="colorDiv" style="background-color: #1a7ef6;">
+                        <b>#1A7EF6</b>
+                      </div>
+                      <div class="colorDiv" style="background-color: #efeff5;">
+                        <b>#EFEFF5</b>
+                      </div>
+                      <div class="colorDiv" style="background-color: #1ae891;">
+                        <b>#1AE891</b>
+                      </div>
+                    </div>
+                    <br />
+                    <p>
+                      En cuanto a la distribución de los elementos están
+                      distribuidos adecuadamente alrededor de la pantalla y son
+                      fácilmente accesibles.
+                    </p>
+                  </div>
+                  <!-- Flujo vista 1  -->
+                  <div id="reveal2" class="content">
+                    <h3 class="left">
+                      vista 1.1: <strong>autenticación</strong>
+                    </h3>
+                    <p>
+                      En la vista 1 se solicita al usuario autenticación por
+                      medio de su número telefónico local. Accediendo a una base
+                      de datos remota, desplegada en Firebase que almacena la
+                      lista de los usuarios registrados en la aplicación.
+                    </p>
+                    <br />
+                    <p>
+                      Como se puede ver, esta vista restrige el acceso a otras
+                      vistas antes de ser completada por el usuario.
+                    </p>
+                    <br />
+                    <div>
+                      <button
+                        type="button"
+                        id="funcAuthButton"
+                        class="btn btn-info"
+                      >
+                        Funcionamiento
+                      </button>
+
+                      <button type="button" class="btn btn-outline-light">
+                        <small>Cambios sugeridos</small>
+                      </button>
+                      <button type="button" class="btn btn-outline-danger">
+                        <small>Excepciones</small>
+                      </button>
+                    </div>
+                    <br />
+                  </div>
+
+                  <!-- Flujo vista 1.2  -->
+                  <div id="reveal3" class="content">
+                    <h2 class="left">vista 1.2: <strong>registro</strong></h2>
+                    <p>
+                      Aquí, si es la primera vez que el usuario se registra con
+                      su número telefónico, esta vista se despliega solicitando
+                      al usuario su información básica de perfil. Así, el
+                      usuario puede detallar su nombre, su imagen de perfil, y
+                      una breve descripción del mismo.
+                    </p>
+                    <br />
+                    <div>
+                      <button type="button" class="btn btn-info">
+                        <small>Funcionamiento</small>
+                      </button>
+
+                      <button type="button" class="btn btn-outline-light">
+                        <small>Cambios sugeridos</small>
+                      </button>
+                      <button type="button" class="btn btn-outline-danger">
+                        <small>Excepciones</small>
+                      </button>
+                    </div>
+
+                    <br />
+                  </div>
+
+                  <!-- Flujo vista 2 -->
+                  <div id="reveal4" class="content">
+                    <h2 class="left">vista 2: <strong>contactos</strong></h2>
+                    <p>
+                      Una vez autenticado e identificado el usuario, una de las
+                      vistas principales al alcance del usuario en el mismo
+                      nivel de jerarquía en la navegación, es la que le permite
+                      consultar los contactos almacenados en el dispositivo.
+                    </p>
+                    <br />
+                    <p>
+                      Adicionalmente, aquí realiza una consulta en Firebase por
+                      los contactos del teléfono que estén resistrados en las
+                      bases de datos remotas. De esta forma, se sabe que es otro
+                      usuario registrado, y se puede empezar un proceso de chat
+                      con éste.
+                    </p>
+                    <br />
+                    <div>
+                      <button type="button" class="btn btn-info">
+                        <small>Funcionamiento</small>
+                      </button>
+
+                      <button type="button" class="btn btn-outline-light">
+                        <small>Cambios sugeridos</small>
+                      </button>
+                      <button type="button" class="btn btn-outline-danger">
+                        <small>Excepciones</small>
+                      </button>
+                    </div>
+
+                    <br />
                   </div>
                 </div>
               </div>
             </div>
+            <div class="col-3">
+              <small>(scroll en el iframe para avanzar)</small>
+              <div id="inner_wrap">
+                <!--The Main Thing-->
+                <div id="wrapper" style="perspective: 1300px;">
+                  <div
+                    class="phone view_1"
+                    id="phone_1"
+                    style="width: 293px; height: 640px; overflow-y: scroll;"
+                  >
+                    <div id="uxSec" class="row">
+                      <div class="col-12">
+                        <div id="frame_1" class="row">
+                          <div class="col-12">
+                            <img
+                              id="img1"
+                              src="./imgs/1.jpeg"
+                              style="width: 257px;"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+                        <div class="row" id="frame_2">
+                          <div class="col-12">
+                            <img
+                              id="img2"
+                              src="./imgs/2.PNG"
+                              style="width: 257px;"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row" id="frame_3">
+                      <div class="col-12">
+                        <img
+                          id="img3"
+                          src="./imgs/3.png"
+                          style="width: 257px;"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="row" id="frame_4">
+                      <div class="col-12">
+                        <img
+                          id="img4"
+                          src="./imgs/4.PNG"
+                          style="width: 257px;"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    id="phone_2"
+                    class="phone_2 view_2"
+                    style="
+                      width: 270px;
+                      height: 640px;
+                      overflow-y: scroll;
+                      z-index: -1;
+                      transform: translate(50%, 10%);
+                      position: absolute;
+                      top: 0;
+                      right: 0;
+                    "
+                  >
+                    <div id="frame_1" class="row">
+                      <div class="col-12">
+                        <img
+                          id="img12"
+                          src="./imgs/1_night.jpeg"
+                          style="width: 257px;"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-3"></div>
           </div>
         </div>
       </div>
@@ -85,19 +293,225 @@
     >
       <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
         <div class="modal-content">
-          <div class="modal-body mx-auto">
+          <div class="modal-body mx-auto" style="text-align: center;">
+            <h4>Antes de comenzar</h4>
+
+            <div style="text-align: justify; font-size: 0.8rem;">
+              1. En la parte izquierda encontrará las distintas secciones. Puede
+              navegar haciendo click en ellas. <br /><br />
+              2. Las secciones en las que se encuentre un <code>iframe</code> de
+              móvil son scrollabel. Esto siginifa que posicionando el cursor en
+              estas secciones y haciendo el gesto de scroll, podrá encontrar más
+              contenido. <br /><br />
+              3. Hay secciones que, por su complejidad, fueron
+              <i>'colapsadas'</i> en elementos de tipo <code>accordion</code>.
+              Por favor, cuando encuentre una de éstas, siga la continuidad de
+              las mismas abriendo cada una de las subsecciones. <br /><br />
+            </div>
+
             <button
               id="scenesButton"
               type="button"
               class="btn btn-secondary"
               data-dismiss="modal"
             >
-              Start report
+              Iniciar Reporte
             </button>
           </div>
         </div>
       </div>
     </div>
+    <div
+      class="modal fade"
+      id="funcAuthModal"
+      onclick="setScenes()"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h4>
+              ¿Cómo funciona la autenticación?
+            </h4>
+            <div id="accordion">
+              <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h5 class="mb-0">
+                    <button
+                      class="btn btn-link"
+                      data-toggle="collapse"
+                      data-target="#collapseOne"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    >
+                      Paso #1
+                    </button>
+                  </h5>
+                </div>
+
+                <div
+                  id="collapseOne"
+                  class="collapse show"
+                  aria-labelledby="headingOne"
+                  data-parent="#accordion"
+                >
+                  <div class="card-body">
+                    1. Se introduce el número y se selecciona la ciudad. Estos
+                    datos se pasan a la siguiente vista en un
+                    <code>label</code>. <br /><br />
+                    2. Cuando se presiona <code>Next</code> se comprueba si hay
+                    conexión a internet y si no se ha enviado ningún código de
+                    verificación antes y se procede a enviar el mensaje de
+                    verificación. <br /><br />
+                    3. Para el mensaje se llama al método
+                    <code
+                      >PhoneAuthProvider .provider() .verifyPhoneNumber</code
+                    >
+                    el cual envía el mensaje de texto al número indicado y
+                    muestra un <code>SFSafariViewController</code> para
+                    comprobar que es una persona y no un ataque. Al final guarda
+                    en <code>userDefaults</code> una variable
+                    <code>verificationID</code> que es con la que posteriormente
+                    se va a comprobar si el código que ingresó el usuario es
+                    correcto.<br /><br />
+
+                    <img class="w-100" src="./imgs/how/2_1.png" />
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingTwo">
+                  <h5 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed"
+                      data-toggle="collapse"
+                      data-target="#collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="collapseTwo"
+                    >
+                      Paso #2
+                    </button>
+                  </h5>
+                </div>
+                <div
+                  id="collapseTwo"
+                  class="collapse"
+                  aria-labelledby="headingTwo"
+                  data-parent="#accordion"
+                >
+                  <div class="card-body">
+                    3. Si el usuario presiona el botón de resend message se
+                    vuelve a repetir lo mismo del paso anterior a excepción que
+                    el método ahora deshabilita el botón y se inicia un contador
+                    al final. <br /><br />
+                    4. Posteriormente cuando ya el usuario introduce un código
+                    de confirmación y presiona next, se accede a la función
+                    <code>authenticate</code> la cual accede a la
+                    <code>VerificationID</code>
+                    guardada y junto con el código que ingresó el usuario crea
+                    una credencial para acceder y lo intenta con
+                    <code>Auth.auth().signIn</code> de Firebase. Si termina en
+                    error lo notifica al usuario. Si es exitoso continúa
+                    verificando si el usuario ya se ha registrado y pasa a la
+                    siguiente pantalla. <br /><br />
+                    <img class="w-100" src="./imgs/how/2_2.png" />
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingThree">
+                  <h5 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed"
+                      data-toggle="collapse"
+                      data-target="#collapseThree"
+                      aria-expanded="false"
+                      aria-controls="collapseThree"
+                    >
+                      Paso #3
+                    </button>
+                  </h5>
+                </div>
+                <div
+                  id="collapseThree"
+                  class="collapse"
+                  aria-labelledby="headingThree"
+                  data-parent="#accordion"
+                >
+                  <div class="card-body">
+                    5. En la última pantalla el usuario pasa tiene que ingresar
+                    el nombre, un estado y una foto. Si el usuario ya existe en
+                    la base de datos, carga los datos que ya se tenían con el
+                    método <code>checkIfUserDataExist</code> en el que consulta
+                    en Firebase y asigna los valores. Para la foto la escala
+                    primero y luego la muestra. <br /><br />
+                    <img src="./imgs/how/2_3.png" alt="" class="w-100" />
+                    <br />
+                    <div
+                      class="w-100"
+                      style="text-align: center; font-size: 1rem;"
+                    >
+                      [...]
+                    </div>
+
+                    <br />
+                    <img src="./imgs/how/2_4.png" alt="" class="w-100" />
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingFour">
+                  <h5 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed"
+                      data-toggle="collapse"
+                      data-target="#collapseFour"
+                      aria-expanded="false"
+                      aria-controls="collapseFour"
+                    >
+                      Paso #4
+                    </button>
+                  </h5>
+                </div>
+                <div
+                  id="collapseFour"
+                  class="collapse"
+                  aria-labelledby="headingFour"
+                  data-parent="#accordion"
+                >
+                  <div class="card-body">
+                    5.1 Para el manejo del contador se hace por medio del
+                    delegado del <code>TextView</code>, cambiando el
+                    <code>label</code> cuando el texto cambia. <br /><br />
+                    5.2 Si el usuario presiona en la foto y hay conexión a
+                    internet se usa
+                    <code>
+                      AvatarOpener
+                    </code>
+                    explicado en las librerías generales. Este se usa para todo
+                    el proceso de cambiar, cargar, editar o borrar la imagen.
+                    <br /><br />
+                    <img src="./imgs/how/2_5.png" alt="" class="w-100" />
+                    <br />
+                    <br />
+                    6. Cuando se presiona next, se procede a guardar los datos
+                    mediante la función <code>rigthBarButtonDidTap</code> en la
+                    clase <code>UserProfileController</code>. Esta a su vez
+                    llama a <code>updateUserData</code>, encargada de escribir
+                    en la base de datos los datos de teléfono, nombre y estado.
+                    <br />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
       integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -114,7 +528,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
     <script src="./script.js"></script>
+    <script src="./sidebarController.js"></script>
   </body>
 </html>
