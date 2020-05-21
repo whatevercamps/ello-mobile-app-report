@@ -118,13 +118,13 @@ $("#funcContactsButton").click(() => {
 });
 $("#scenesButton").click(setScenes);
 
-setScenes();
-// setTimeout(function () {
-//   phone.className = "phone view_1 rotate";
-//   $("#staticBackdrop").modal("show");
-//   setTimeout(function () {
-//     document.getElementById("scenesButton").addEventListener("click", (evt) => {
-//       console.log("click", evt);
-//     });
-//   }, 2000);
-// }, 1000);
+// setScenes();
+setTimeout(function () {
+  phone.className = "phone view_1 rotate";
+  $("#staticBackdrop").modal("show");
+  setTimeout(function () {
+    document.getElementById("scenesButton").addEventListener("click", (evt) => {
+      console.log("click", evt);
+    });
+  }, 2000);
+}, 1000);
