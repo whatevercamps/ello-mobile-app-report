@@ -91,6 +91,13 @@ const setScenes = () => {
       .setClassToggle("#reveal4", "visible") // add class to reveal
       .addTo(controller);
 
+    new ScrollMagic.Scene({
+      triggerElement: "#connContainer",
+      duration: "100%",
+    })
+      .setPin("#pinconn1")
+      .addTo(controller);
+
     /* Aux Phone for other views :v   */
 
     setTimeout(() => {
@@ -116,15 +123,35 @@ $("#funcAuthButton").click(() => {
 $("#funcContactsButton").click(() => {
   setFuncionamiento("#funcContactsModal");
 });
+$("#pinconn1").click(() => {
+  setFuncionamiento("#funcConnModal");
+});
+
 $("#scenesButton").click(setScenes);
 
-// setScenes();
-setTimeout(function () {
-  phone.className = "phone view_1 rotate";
-  $("#staticBackdrop").modal("show");
-  setTimeout(function () {
-    document.getElementById("scenesButton").addEventListener("click", (evt) => {
-      console.log("click", evt);
-    });
-  }, 2000);
-}, 1000);
+$("#revealconn1").click(() => {
+  $("#conn1").toggleClass("show");
+  const text = $("#revealconn1").text();
+  $("#revealconn1").text(
+    text === "Ver código" ? "Ocultar código" : "Ver código"
+  );
+});
+
+$("#revealconn2").click(() => {
+  $("#conn2").toggleClass("show");
+  const text = $("#revealconn2").text();
+  $("#revealconn2").text(
+    text === "Ver código" ? "Ocultar código" : "Ver código"
+  );
+});
+
+setScenes();
+// setTimeout(function () {
+//   phone.className = "phone view_1 rotate";
+//   $("#staticBackdrop").modal("show");
+//   setTimeout(function () {
+//     document.getElementById("scenesButton").addEventListener("click", (evt) => {
+//       console.log("click", evt);
+//     });
+//   }, 2000);
+// }, 1000);

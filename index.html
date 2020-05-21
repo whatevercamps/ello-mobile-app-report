@@ -345,16 +345,33 @@
             </div>
           </div>
         </section>
+        <!-- ********************** -->
+        <!-- ********************** -->
         <!-- Seccion de performance -->
+        <!-- ********************** -->
+        <!-- ********************** -->
         <div id="performanceSeccion" class="videoContainer">
           <div class="screen mute" id="tv"></div>
           <div class="foreground"></div>
         </div>
 
-        <section id="conectividadSection">
-          <div class="container">
+        <!-- *********************** -->
+        <!-- *********************** -->
+        <!-- Seccion de conectividad -->
+        <!-- *********************** -->
+        <!-- *********************** -->
+
+        <section id="conectividadSection" style="height: auto;">
+          <div class="card" id="pinconn1">
+            <div class="card-body">
+              <h4>¿Cómo funciona?</h4>
+            </div>
+          </div>
+          <div class="container" id="connContainer">
             <div class="page-header">
-              <h1 id="timeline">Steps donde la conectividad importa 🤓</h1>
+              <h1 id="timeline">
+                Steps donde la conectividad importa 🤓
+              </h1>
             </div>
             <ul class="timeline">
               <li>
@@ -373,16 +390,19 @@
                     </p>
                   </div>
                   <div class="timeline-body">
-                    <p>
-                      Mussum ipsum cacilds, vidis litro abertis. Consetis
-                      adipiscings elitis. Pra lá , depois divoltis porris,
-                      paradis. Paisis, filhis, espiritis santis. Mé faiz
-                      elementum girarzis, nisi eros vermeio, in elementis mé pra
-                      quem é amistosis quis leo. Manduma pindureta quium dia
-                      nois paga. Sapien in monti palavris qui num significa
-                      nadis i pareci latim. Interessantiss quisso pudia ce
-                      receita de bolis, mais bolis eu num gostis.
-                    </p>
+                    <img class="w-100" src="./imgs/ev_conn/1_1.PNG" alt="" />
+                    <div class="timeline-code" id="conn1">
+                      <img class="w-100" src="./imgs/ev_conn/1_2.PNG" alt="" />
+                    </div>
+                  </div>
+
+                  <div class="timeline-footer">
+                    <hr />
+                    <div style="width: 100%; text-align: center;">
+                      <small style="cursor: pointer;" id="revealconn1"
+                        >Ver código</small
+                      >
+                    </div>
                   </div>
                 </div>
               </li>
@@ -392,30 +412,14 @@
                 </div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">
-                    <h4 class="timeline-title">Mussum ipsum cacilds</h4>
-                  </div>
-                  <div class="timeline-body">
+                    <h4 class="timeline-title">
+                      Verificación del código TSA
+                    </h4>
                     <p>
-                      Mussum ipsum cacilds, vidis litro abertis. Consetis
-                      adipiscings elitis. Pra lá , depois divoltis porris,
-                      paradis. Paisis, filhis, espiritis santis. Mé faiz
-                      elementum girarzis, nisi eros vermeio, in elementis mé pra
-                      quem é amistosis quis leo. Manduma pindureta quium dia
-                      nois paga. Sapien in monti palavris qui num significa
-                      nadis i pareci latim. Interessantiss quisso pudia ce
-                      receita de bolis, mais bolis eu num gostis.
-                    </p>
-                    <p>
-                      Suco de cevadiss, é um leite divinis, qui tem lupuliz,
-                      matis, aguis e fermentis. Interagi no mé, cursus quis,
-                      vehicula ac nisi. Aenean vel dui dui. Nullam leo erat,
-                      aliquet quis tempus a, posuere ut mi. Ut scelerisque neque
-                      et turpis posuere pulvinar pellentesque nibh ullamcorper.
-                      Pharetra in mattis molestie, volutpat elementum justo.
-                      Aenean ut ante turpis. Pellentesque laoreet mé vel lectus
-                      scelerisque interdum cursus velit auctor. Lorem ipsum
-                      dolor sit amet, consectetur adipiscing elit. Etiam ac
-                      mauris lectus, non scelerisque augue. Aenean justo massa.
+                      <small class="text-muted"
+                        >Cuando se va a iniciar el proceso de verificación del
+                        código de autenticación en dos pasos
+                      </small>
                     </p>
                   </div>
                 </div>
@@ -426,18 +430,13 @@
                 </div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">
-                    <h4 class="timeline-title">Mussum ipsum cacilds</h4>
-                  </div>
-                  <div class="timeline-body">
+                    <h4 class="timeline-title">
+                      Obtención de credenciales
+                    </h4>
                     <p>
-                      Mussum ipsum cacilds, vidis litro abertis. Consetis
-                      adipiscings elitis. Pra lá , depois divoltis porris,
-                      paradis. Paisis, filhis, espiritis santis. Mé faiz
-                      elementum girarzis, nisi eros vermeio, in elementis mé pra
-                      quem é amistosis quis leo. Manduma pindureta quium dia
-                      nois paga. Sapien in monti palavris qui num significa
-                      nadis i pareci latim. Interessantiss quisso pudia ce
-                      receita de bolis, mais bolis eu num gostis.
+                      <small class="text-muted"
+                        >Antes de intentar obtener la credencial de acceso
+                      </small>
                     </p>
                   </div>
                 </div>
@@ -448,41 +447,62 @@
                 </div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">
-                    <h4 class="timeline-title">Mussum ipsum cacildsd</h4>
+                    <h4 class="timeline-title">
+                      Edición del profile
+                    </h4>
+                    <p>
+                      <small class="text-muted"
+                        >Cuando se van a guardar los datos del usuario (Foto,
+                        nombre, teléfono y estado)
+                      </small>
+                    </p>
                   </div>
                   <div class="timeline-body">
-                    <p>
-                      Mussum ipsum cacilds, vidis litro abertis. Consetis
-                      adipiscings elitis. Pra lá , depois divoltis porris,
-                      paradis. Paisis, filhis, espiritis santis. Mé faiz
-                      elementum girarzis, nisi eros vermeio, in elementis mé pra
-                      quem é amistosis quis leo. Manduma pindureta quium dia
-                      nois paga. Sapien in monti palavris qui num significa
-                      nadis i pareci latim. Interessantiss quisso pudia ce
-                      receita de bolis, mais bolis eu num gostis.
-                    </p>
+                    <img class="w-100" src="./imgs/ev_conn/2_1.jpeg" alt="" />
+                    <div class="timeline-code" id="conn2">
+                      <img class="w-100" src="./imgs/ev_conn/2_2.png" alt="" />
+                    </div>
+                  </div>
+
+                  <div class="timeline-footer">
                     <hr />
-                    <div class="btn-group">
-                      <button
-                        type="button"
-                        class="btn btn-primary btn-sm dropdown-toggle"
-                        data-toggle="dropdown"
+                    <div style="width: 100%; text-align: center;">
+                      <small style="cursor: pointer;" id="revealconn2"
+                        >Ver código</small
                       >
-                        <i class="glyphicon glyphicon-cog"></i>
-                        <span class="caret"></span>
-                      </button>
-                      <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                      </ul>
                     </div>
                   </div>
                 </div>
               </li>
             </ul>
+          </div>
+        </section>
+
+        <!-- ********************** -->
+        <!-- ********************** -->
+        <!-- *Seccion de librerías* -->
+        <!-- ********************** -->
+        <!-- ********************** -->
+
+        <section>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4">
+                <button lang="en" type="submit" class="button submit-contact">
+                  Say hi!
+                </button>
+              </div>
+              <div class="col-md-4">
+                <button lang="en" type="submit" class="button submit-contact">
+                  Say hi!
+                </button>
+              </div>
+              <div class="col-md-4">
+                <button lang="en" type="submit" class="button submit-contact">
+                  Say hi!
+                </button>
+              </div>
+            </div>
           </div>
         </section>
       </div>
@@ -986,6 +1006,95 @@
                     Si el contacto si está registrado en falcon se accederá a la
                     parte de chat con el contacto que se explicará
                     posteriormente.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ******************* -->
+    <!-- Eventual Conn Modal -->
+    <!-- ******************* -->
+    <div
+      class="modal fade"
+      id="funcConnModal"
+      onclick="setScenes()"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h4>
+              ¿Cómo funciona la sincronización de contactos?
+            </h4>
+            <div id="connaccordion" class="accordion">
+              <div class="card">
+                <div class="card-header" id="connheadingOne">
+                  <h5 class="mb-0">
+                    <button
+                      class="btn btn-link"
+                      data-toggle="collapse"
+                      data-target="#conncollapseOne"
+                      aria-expanded="true"
+                      aria-controls="conncollapseOne"
+                    >
+                      Paso #1
+                    </button>
+                  </h5>
+                </div>
+
+                <div
+                  id="conncollapseOne"
+                  class="collapse show"
+                  aria-labelledby="connheadingOne"
+                  data-parent="#connaccordion"
+                >
+                  <div class="card-body">
+                    Para la conectividad eventual se utiliza la clase Public en
+                    la carpeta <i>Support/Public</i> <br /><br />
+                    El estado de la conexión se almacena en una variable que
+                    puede tomar 3 estados: <code>notReachable</code> cuando no
+                    se puede establecer la conexión,
+                    <code>reachableViaWan</code> cuando se establece conexión
+                    mediante los datos del celular y
+                    <code>reachableViaWifi</code> cuando se puede establecer
+                    conexión mediante Wifi. <br /><br />
+
+                    <img src="./imgs/ev_conn/how_1.png" />
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="connheadingTwo">
+                  <h5 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed"
+                      data-toggle="collapse"
+                      data-target="#conncollapseTwo"
+                      aria-expanded="false"
+                      aria-controls="conncollapseTwo"
+                    >
+                      Paso #2
+                    </button>
+                  </h5>
+                </div>
+                <div
+                  id="conncollapseTwo"
+                  class="collapse"
+                  aria-labelledby="connheadingTwo"
+                  data-parent="#connaccordion"
+                >
+                  <div class="card-body">
+                    Para revisar el estado de la conexión se usa
+                    <code>SCNetworkReachabilityFlags</code> valores si se puede
+                    alcanzar o no una dirección dada. <br /><br />
+                    <img class="w-100" src="./imgs/ev_conn/how_2.png" />
                   </div>
                 </div>
               </div>

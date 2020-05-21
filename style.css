@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Mono&family=Open+Sans:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono&family=Open+Sans:wght@300;400;700&display=swap");
 
 html {
   height: 100%;
@@ -743,4 +743,54 @@ section {
   top: 0;
   z-index: 10;
   position: absolute;
+}
+
+#pinconn1 {
+  width: 200px;
+  height: 100px;
+  z-index: 10;
+  left: 160px;
+  position: absolute;
+  background-color: #a6356d;
+  cursor: pointer;
+}
+
+#pinconn1:hover {
+  color: #eaeaea;
+  background-color: #902a5a;
+}
+
+#pinconn1 h4 {
+  color: #eee;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+}
+
+.button {
+  box-shadow: -3px 3px #999bab;
+  border-radius: 5px;
+  padding: 8px 20px;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  display: inline-block;
+  text-align: center;
+  margin: 10px;
+  cursor: pointer;
+  width: 70%;
+  height: 200px;
+}
+
+.button:hover {
+  box-shadow: -2px 2px #999bab;
+  transform: translate(-1px, 1px);
+}
+
+.button:active {
+  box-shadow: none !important;
+  transform: translate(-2px, 2px);
+}
+
+.submit-contact {
+  background: #65e8e3;
 }
