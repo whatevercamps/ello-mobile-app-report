@@ -10,6 +10,11 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./timelineStyles.css" />
+    <script
+      src="https://kit.fontawesome.com/42bffecd35.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="wrapper">
@@ -21,9 +26,16 @@
 
         <ul class="list-unstyled components">
           <li>
-            <a id="resume" href="#resume" lang="es"> UI/UX</a>
-            <a id="projects" href="#projects" lang="es">
+            <a id="resume" href="#uxSection" lang="es"> UI/UX</a>
+          </li>
+          <li>
+            <a id="projects" href="#performanceSection" lang="es">
               Performance
+            </a>
+          </li>
+          <li>
+            <a id="projects" href="#conectividadSection" lang="es">
+              Conectividad E.
             </a>
           </li>
           <li>
@@ -42,241 +54,586 @@
       </nav>
 
       <div id="content">
-        <div class="container-fluid">
+        <!-- Seccion de ux -->
+        <section id="uxSection">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-12" style="text-align: center;" id="lulopene">
+                <h1>FALCON MESSENGER <small>REPORTE DE APP MÓVIL</small></h1>
+                <hr />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-5">
+                <div class="spacer s2"></div>
+                <div class="row titles" style="text-align: left;">
+                  <div class="col-12">
+                    <h4 id="uxSecTitle" class="secTitle">Análisis UI/UX</h4>
+                    <h4 id="perfSecTitle" class="secTitle">
+                      Análisis de Performance
+                    </h4>
+                    <h4 id="libSecTitle" class="secTitle">Librerías</h4>
+                    <h4 id="genSecTitle" class="secTitle">Generalidades</h4>
+                  </div>
+                </div>
+                <div class="row sections">
+                  <div class="col-12">
+                    <!-- Estilo -->
+                    <div id="reveal1" class="content">
+                      <h3 class="left">
+                        Colores y fuentes
+                      </h3>
+                      <p>
+                        En general el manejo de los colores está bien ya que se
+                        resaltan bien en modo oscuro y claro. El estilo de letra
+                        es claro y el tamaño adecuado.
+                      </p>
+                      <br />
+                      <div class="colorsList">
+                        <div
+                          class="colorDiv"
+                          style="background-color: #1a7ef6;"
+                        >
+                          <b>#1A7EF6</b>
+                        </div>
+                        <div
+                          class="colorDiv"
+                          style="background-color: #efeff5;"
+                        >
+                          <b>#EFEFF5</b>
+                        </div>
+                        <div
+                          class="colorDiv"
+                          style="background-color: #1ae891;"
+                        >
+                          <b>#1AE891</b>
+                        </div>
+                      </div>
+                      <br />
+                      <p>
+                        En cuanto a la distribución de los elementos están
+                        distribuidos adecuadamente alrededor de la pantalla y
+                        son fácilmente accesibles.
+                      </p>
+                    </div>
+                    <!-- Flujo vista 1  -->
+                    <div id="reveal2" class="content">
+                      <h3 class="left">
+                        vista 1.1: <strong>autenticación</strong>
+                      </h3>
+                      <p>
+                        En la vista 1 se solicita al usuario autenticación por
+                        medio de su número telefónico local. Accediendo a una
+                        base de datos remota, desplegada en Firebase que
+                        almacena la lista de los usuarios registrados en la
+                        aplicación.
+                      </p>
+                      <br />
+                      <p>
+                        Como se puede ver, esta vista restrige el acceso a otras
+                        vistas antes de ser completada por el usuario.
+                      </p>
+                      <br />
+                      <div>
+                        <button
+                          type="button"
+                          id="funcAuthButton"
+                          class="btn btn-info"
+                        >
+                          Funcionamiento
+                        </button>
+                        <button
+                          type="button"
+                          class="btn btn-outline-light"
+                          id="mostrarCambios1"
+                        >
+                          <small>Cambios sugeridos</small>
+                        </button>
+                      </div>
+                      <br />
+                    </div>
+
+                    <!-- Flujo vista 1.2  -->
+                    <div id="reveal3" class="content">
+                      <h2 class="left">vista 1.2: <strong>registro</strong></h2>
+                      <p>
+                        Aquí, si es la primera vez que el usuario se registra
+                        con su número telefónico, esta vista se despliega
+                        solicitando al usuario su información básica de perfil.
+                        Así, el usuario puede detallar su nombre, su imagen de
+                        perfil, y una breve descripción del mismo.
+                      </p>
+                      <br />
+                      <div>
+                        <button type="button" class="btn btn-info">
+                          <small>Funcionamiento</small>
+                        </button>
+
+                        <button
+                          type="button"
+                          class="btn btn-outline-light"
+                          id="mostrarCambios2"
+                        >
+                          <small>Cambios sugeridos</small>
+                        </button>
+                        <button type="button" class="btn btn-outline-danger">
+                          <small>Excepciones</small>
+                        </button>
+                      </div>
+
+                      <br />
+                    </div>
+
+                    <!-- Flujo vista 2 -->
+                    <div id="reveal4" class="content">
+                      <h2 class="left">vista 2: <strong>contactos</strong></h2>
+                      <p>
+                        Una vez autenticado e identificado el usuario, una de
+                        las vistas principales al alcance del usuario en el
+                        mismo nivel de jerarquía en la navegación, es la que le
+                        permite consultar los contactos almacenados en el
+                        dispositivo.
+                      </p>
+                      <br />
+                      <p>
+                        Adicionalmente, aquí realiza una consulta en Firebase
+                        por los contactos del teléfono que estén resistrados en
+                        las bases de datos remotas. De esta forma, se sabe que
+                        es otro usuario registrado, y se puede empezar un
+                        proceso de chat con éste.
+                      </p>
+                      <br />
+                      <div>
+                        <button
+                          id="funcContactsButton"
+                          type="button"
+                          class="btn btn-info"
+                        >
+                          <small>Funcionamiento</small>
+                        </button>
+
+                        <button type="button" class="btn btn-outline-light">
+                          <small>Cambios sugeridos</small>
+                        </button>
+                        <button type="button" class="btn btn-outline-danger">
+                          <small>Excepciones</small>
+                        </button>
+                      </div>
+
+                      <br />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3">
+                <small style="position: absolute;"
+                  >(scroll en el iframe para avanzar)</small
+                >
+                <div id="inner_wrap">
+                  <!--The Main Thing-->
+                  <div id="wrapper" style="perspective: 1300px;">
+                    <div
+                      class="phone view_1"
+                      id="phone_1"
+                      style="width: 270px; height: 667px; overflow-y: scroll;"
+                    >
+                      <div id="uxSec" class="row">
+                        <div class="col-12">
+                          <div id="frame_1" class="row">
+                            <div class="col-12">
+                              <img
+                                id="img1"
+                                src="./imgs/1.jpeg"
+                                style="width: 257px;"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                          <div class="row" id="frame_2">
+                            <div class="col-12">
+                              <img
+                                id="img2"
+                                src="./imgs/2.PNG"
+                                style="width: 257px;"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row" id="frame_3">
+                        <div class="col-12">
+                          <img
+                            id="img3"
+                            src="./imgs/3.png"
+                            style="width: 257px;"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <div class="row" id="frame_4">
+                        <div class="col-12">
+                          <img
+                            id="img4"
+                            src="./imgs/4.PNG"
+                            style="width: 257px;"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      id="phone_2"
+                      class="phone_2 view_2"
+                      style="
+                        width: 270px;
+                        height: 640px;
+                        overflow-y: scroll;
+                        z-index: -1;
+                        transform: translate(50%, 10%);
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                      "
+                    >
+                      <div id="frame_1" class="row">
+                        <div class="col-12">
+                          <img
+                            id="img12"
+                            src="./imgs/1_night.jpeg"
+                            style="width: 257px;"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3">
+                <!-- **************** -->
+                <!-- Telefono Lateral -->
+                <!-- **************** -->
+                <div id="inner_wrap">
+                  <!--The Main Thing-->
+                  <div id="wrapper" style="perspective: 1300px;">
+                    <div
+                      class="phone view_2"
+                      id="phone_3"
+                      style="width: 270px; height: 667px; overflow-y: scroll;"
+                    >
+                      <div class="row">
+                        <div class="col-12">
+                          <div class="row">
+                            <div class="col-12">
+                              <img
+                                id="img_phone3"
+                                src="./imgs/2_1.PNG"
+                                style="width: 257px;"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-1"></div>
+            </div>
+          </div>
+        </section>
+        <!-- Seccion de performance -->
+        <div id="performanceSeccion" class="videoContainer">
+          <div class="screen mute" id="tv"></div>
+          <div class="foreground"></div>
+        </div>
+
+        <section id="conectividadSection">
+          <div class="container">
+            <div class="page-header">
+              <h1 id="timeline">Steps donde la conectividad importa 🤓</h1>
+            </div>
+            <ul class="timeline">
+              <li>
+                <div class="timeline-badge">
+                  <i class="fas fa-sms"></i>
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4 class="timeline-title">
+                      Envío de mensaje de verificación
+                    </h4>
+                    <p>
+                      <small class="text-muted"
+                        >Antes y al solicitar reenvío</small
+                      >
+                    </p>
+                  </div>
+                  <div class="timeline-body">
+                    <p>
+                      Mussum ipsum cacilds, vidis litro abertis. Consetis
+                      adipiscings elitis. Pra lá , depois divoltis porris,
+                      paradis. Paisis, filhis, espiritis santis. Mé faiz
+                      elementum girarzis, nisi eros vermeio, in elementis mé pra
+                      quem é amistosis quis leo. Manduma pindureta quium dia
+                      nois paga. Sapien in monti palavris qui num significa
+                      nadis i pareci latim. Interessantiss quisso pudia ce
+                      receita de bolis, mais bolis eu num gostis.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-inverted">
+                <div class="timeline-badge warning">
+                  <i class="fas fa-unlock-alt"></i>
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p>
+                      Mussum ipsum cacilds, vidis litro abertis. Consetis
+                      adipiscings elitis. Pra lá , depois divoltis porris,
+                      paradis. Paisis, filhis, espiritis santis. Mé faiz
+                      elementum girarzis, nisi eros vermeio, in elementis mé pra
+                      quem é amistosis quis leo. Manduma pindureta quium dia
+                      nois paga. Sapien in monti palavris qui num significa
+                      nadis i pareci latim. Interessantiss quisso pudia ce
+                      receita de bolis, mais bolis eu num gostis.
+                    </p>
+                    <p>
+                      Suco de cevadiss, é um leite divinis, qui tem lupuliz,
+                      matis, aguis e fermentis. Interagi no mé, cursus quis,
+                      vehicula ac nisi. Aenean vel dui dui. Nullam leo erat,
+                      aliquet quis tempus a, posuere ut mi. Ut scelerisque neque
+                      et turpis posuere pulvinar pellentesque nibh ullamcorper.
+                      Pharetra in mattis molestie, volutpat elementum justo.
+                      Aenean ut ante turpis. Pellentesque laoreet mé vel lectus
+                      scelerisque interdum cursus velit auctor. Lorem ipsum
+                      dolor sit amet, consectetur adipiscing elit. Etiam ac
+                      mauris lectus, non scelerisque augue. Aenean justo massa.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="timeline-badge danger">
+                  <i class="fas fa-key"></i>
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p>
+                      Mussum ipsum cacilds, vidis litro abertis. Consetis
+                      adipiscings elitis. Pra lá , depois divoltis porris,
+                      paradis. Paisis, filhis, espiritis santis. Mé faiz
+                      elementum girarzis, nisi eros vermeio, in elementis mé pra
+                      quem é amistosis quis leo. Manduma pindureta quium dia
+                      nois paga. Sapien in monti palavris qui num significa
+                      nadis i pareci latim. Interessantiss quisso pudia ce
+                      receita de bolis, mais bolis eu num gostis.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="timeline-badge info">
+                  <i class="fas fa-user-alt"></i>
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4 class="timeline-title">Mussum ipsum cacildsd</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p>
+                      Mussum ipsum cacilds, vidis litro abertis. Consetis
+                      adipiscings elitis. Pra lá , depois divoltis porris,
+                      paradis. Paisis, filhis, espiritis santis. Mé faiz
+                      elementum girarzis, nisi eros vermeio, in elementis mé pra
+                      quem é amistosis quis leo. Manduma pindureta quium dia
+                      nois paga. Sapien in monti palavris qui num significa
+                      nadis i pareci latim. Interessantiss quisso pudia ce
+                      receita de bolis, mais bolis eu num gostis.
+                    </p>
+                    <hr />
+                    <div class="btn-group">
+                      <button
+                        type="button"
+                        class="btn btn-primary btn-sm dropdown-toggle"
+                        data-toggle="dropdown"
+                      >
+                        <i class="glyphicon glyphicon-cog"></i>
+                        <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div id="sugerencias1" class="sugerenciasDiv">
+      <div class="cerrar" id="cerrarSugenrencias1">
+        <span style="font-size: 2rem;">&times;</span>
+      </div>
+      <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <a
+            class="nav-item nav-link active"
+            id="nav-cambio1-tab"
+            data-toggle="tab"
+            href="#nav-cambio1"
+            role="tab"
+            aria-controls="nav-cambio1"
+            aria-selected="true"
+            >Cambio #1</a
+          >
+        </div>
+      </nav>
+      <div class="tab-content" id="nav-tabContent">
+        <div
+          class="tab-pane fade show active"
+          id="nav-cambio1"
+          role="tabpanel"
+          aria-labelledby="nav-cambio1-tab"
+        >
           <div class="row">
-            <div class="col-12" style="text-align: center;">
-              <h1>FALCON MESSENGER <small>REPORTE DE APP MÓVIL</small></h1>
-              <hr />
+            <div class="col-12">
+              <br />
+              <p>
+                - Cuando hay un error en el número no hay forma de cambiarlo
+                debido a que la única pantalla para editarlo es la primera y una
+                vez se presiona next el botón de back se oculta. Se sugiere
+                borrar el siguiente método ubicado en la clase
+                <code>EnterVerificationCodeController</code> para poder volver y
+                así editar el número o el país sin tener que reiniciar la
+                aplicación. <br /><br />
+
+                <img
+                  class="w-100"
+                  src="./imgs/cambios/s1_c1_code1.png"
+                  alt=""
+                />
+                <br /><br />
+              </p>
+
+              <p>
+                - Se recomienda agregar el siguiente <code>if</code> antes de
+                mostrar la alerta luego de intentar enviar un mensaje de texto
+                para corregir el anti patrón. Se debe agregar en los dos métodos
+                de agregar mensaje (El de enviar mensaje y reenviar mensaje) en
+                el método
+                <code>PhoneAuthProvider .provider() .verifyPhoneNumber</code>
+                <br /><br />
+
+                <img
+                  class="w-100"
+                  src="./imgs/cambios/s1_c1_code2.png"
+                  alt=""
+                />
+              </p>
             </div>
           </div>
           <div class="row">
-            <div class="col-6">
-              <div class="spacer s2"></div>
-              <div class="row titles" style="text-align: left;">
-                <div class="col-12">
-                  <h4 id="uxSecTitle" class="secTitle">Análisis UI/UX</h4>
-                  <h4 id="perfSecTitle" class="secTitle">
-                    Análisis de Performance
-                  </h4>
-                  <h4 id="libSecTitle" class="secTitle">Librerías</h4>
-                  <h4 id="genSecTitle" class="secTitle">Generalidades</h4>
-                </div>
-              </div>
-              <div class="row sections">
-                <div class="col-12">
-                  <!-- Estilo -->
-                  <div id="reveal1" class="content">
-                    <h3 class="left">
-                      Colores y fuentes
-                    </h3>
-                    <p>
-                      En general el manejo de los colores está bien ya que se
-                      resaltan bien en modo oscuro y claro. El estilo de letra
-                      es claro y el tamaño adecuado.
-                    </p>
-                    <br />
-                    <div class="colorsList">
-                      <div class="colorDiv" style="background-color: #1a7ef6;">
-                        <b>#1A7EF6</b>
-                      </div>
-                      <div class="colorDiv" style="background-color: #efeff5;">
-                        <b>#EFEFF5</b>
-                      </div>
-                      <div class="colorDiv" style="background-color: #1ae891;">
-                        <b>#1AE891</b>
-                      </div>
-                    </div>
-                    <br />
-                    <p>
-                      En cuanto a la distribución de los elementos están
-                      distribuidos adecuadamente alrededor de la pantalla y son
-                      fácilmente accesibles.
-                    </p>
-                  </div>
-                  <!-- Flujo vista 1  -->
-                  <div id="reveal2" class="content">
-                    <h3 class="left">
-                      vista 1.1: <strong>autenticación</strong>
-                    </h3>
-                    <p>
-                      En la vista 1 se solicita al usuario autenticación por
-                      medio de su número telefónico local. Accediendo a una base
-                      de datos remota, desplegada en Firebase que almacena la
-                      lista de los usuarios registrados en la aplicación.
-                    </p>
-                    <br />
-                    <p>
-                      Como se puede ver, esta vista restrige el acceso a otras
-                      vistas antes de ser completada por el usuario.
-                    </p>
-                    <br />
-                    <div>
-                      <button
-                        type="button"
-                        id="funcAuthButton"
-                        class="btn btn-info"
-                      >
-                        Funcionamiento
-                      </button>
-
-                      <button type="button" class="btn btn-outline-light">
-                        <small>Cambios sugeridos</small>
-                      </button>
-                      <button type="button" class="btn btn-outline-danger">
-                        <small>Excepciones</small>
-                      </button>
-                    </div>
-                    <br />
-                  </div>
-
-                  <!-- Flujo vista 1.2  -->
-                  <div id="reveal3" class="content">
-                    <h2 class="left">vista 1.2: <strong>registro</strong></h2>
-                    <p>
-                      Aquí, si es la primera vez que el usuario se registra con
-                      su número telefónico, esta vista se despliega solicitando
-                      al usuario su información básica de perfil. Así, el
-                      usuario puede detallar su nombre, su imagen de perfil, y
-                      una breve descripción del mismo.
-                    </p>
-                    <br />
-                    <div>
-                      <button type="button" class="btn btn-info">
-                        <small>Funcionamiento</small>
-                      </button>
-
-                      <button type="button" class="btn btn-outline-light">
-                        <small>Cambios sugeridos</small>
-                      </button>
-                      <button type="button" class="btn btn-outline-danger">
-                        <small>Excepciones</small>
-                      </button>
-                    </div>
-
-                    <br />
-                  </div>
-
-                  <!-- Flujo vista 2 -->
-                  <div id="reveal4" class="content">
-                    <h2 class="left">vista 2: <strong>contactos</strong></h2>
-                    <p>
-                      Una vez autenticado e identificado el usuario, una de las
-                      vistas principales al alcance del usuario en el mismo
-                      nivel de jerarquía en la navegación, es la que le permite
-                      consultar los contactos almacenados en el dispositivo.
-                    </p>
-                    <br />
-                    <p>
-                      Adicionalmente, aquí realiza una consulta en Firebase por
-                      los contactos del teléfono que estén resistrados en las
-                      bases de datos remotas. De esta forma, se sabe que es otro
-                      usuario registrado, y se puede empezar un proceso de chat
-                      con éste.
-                    </p>
-                    <br />
-                    <div>
-                      <button type="button" class="btn btn-info">
-                        <small>Funcionamiento</small>
-                      </button>
-
-                      <button type="button" class="btn btn-outline-light">
-                        <small>Cambios sugeridos</small>
-                      </button>
-                      <button type="button" class="btn btn-outline-danger">
-                        <small>Excepciones</small>
-                      </button>
-                    </div>
-
-                    <br />
-                  </div>
-                </div>
-              </div>
+            <div class="col-lg-6">
+              <h5>Antes</h5>
+              <img class="w-100" src="./imgs/cambios/s1_c1_1.png" alt="" />
             </div>
-            <div class="col-3">
-              <small>(scroll en el iframe para avanzar)</small>
-              <div id="inner_wrap">
-                <!--The Main Thing-->
-                <div id="wrapper" style="perspective: 1300px;">
-                  <div
-                    class="phone view_1"
-                    id="phone_1"
-                    style="width: 293px; height: 640px; overflow-y: scroll;"
-                  >
-                    <div id="uxSec" class="row">
-                      <div class="col-12">
-                        <div id="frame_1" class="row">
-                          <div class="col-12">
-                            <img
-                              id="img1"
-                              src="./imgs/1.jpeg"
-                              style="width: 257px;"
-                              alt=""
-                            />
-                          </div>
-                        </div>
-                        <div class="row" id="frame_2">
-                          <div class="col-12">
-                            <img
-                              id="img2"
-                              src="./imgs/2.PNG"
-                              style="width: 257px;"
-                              alt=""
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row" id="frame_3">
-                      <div class="col-12">
-                        <img
-                          id="img3"
-                          src="./imgs/3.png"
-                          style="width: 257px;"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                    <div class="row" id="frame_4">
-                      <div class="col-12">
-                        <img
-                          id="img4"
-                          src="./imgs/4.PNG"
-                          style="width: 257px;"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-
-                  <div
-                    id="phone_2"
-                    class="phone_2 view_2"
-                    style="
-                      width: 270px;
-                      height: 640px;
-                      overflow-y: scroll;
-                      z-index: -1;
-                      transform: translate(50%, 10%);
-                      position: absolute;
-                      top: 0;
-                      right: 0;
-                    "
-                  >
-                    <div id="frame_1" class="row">
-                      <div class="col-12">
-                        <img
-                          id="img12"
-                          src="./imgs/1_night.jpeg"
-                          style="width: 257px;"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="col-lg-6">
+              <h5>Después</h5>
+              <img class="w-100" src="./imgs/cambios/s1_c1_2.png" alt="" />
             </div>
-            <div class="col-3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="sugerencias2" class="sugerenciasDiv">
+      <div class="cerrar" id="cerrarSugenrencias2">
+        <span style="font-size: 2rem;">&times;</span>
+      </div>
+      <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <a
+            class="nav-item nav-link active"
+            id="nav-cambio2-tab"
+            data-toggle="tab"
+            href="#nav-cambio2"
+            role="tab"
+            aria-controls="nav-cambio2"
+            aria-selected="true"
+            >Cambio #1</a
+          >
+        </div>
+      </nav>
+
+      <div class="tab-content" id="nav-tabContent">
+        <div
+          class="tab-pane fade show active"
+          id="nav-cambio2"
+          role="tabpanel"
+          aria-labelledby="nav-cambio2-tab"
+        >
+          <div class="row">
+            <div class="col-12">
+              <br />
+              <p>
+                - Se sugiere en la clase
+                <code>UserProfileContainerView</code> cambiar el color del place
+                holder del <code>TextField</code> del nombre como se muestra en
+                la imagen para que se pueda ver mejor en el modo claro
+                <br /><br />
+
+                <img
+                  class="w-100"
+                  src="./imgs/cambios/s1_c2_code1.png"
+                  alt=""
+                />
+                <br /><br />
+              </p>
+
+              <p>
+                - Se sugiere cambiar el color de la letra del PlaceHolder de
+                Name cuando este campo se encuentre vacío a color rojo para ser
+                mostrarle al usuario que se requiere este campo para continuar.
+                Esto es en la clase <code>UserProfileController</code> en el
+                método
+                <code>rightBarButtonDidTap</code>
+                <br /><br />
+
+                <img
+                  class="w-100"
+                  src="./imgs/cambios/s1_c2_code2.png"
+                  alt=""
+                />
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <h5>Subcambio 1</h5>
+              <img class="w-100" src="./imgs/cambios/s1_c2_1.png" alt="" />
+            </div>
+            <div class="col-lg-6">
+              <h5>Subcambio 2</h5>
+              <img class="w-100" src="./imgs/cambios/s1_c2_2.png" alt="" />
+            </div>
           </div>
         </div>
       </div>
@@ -336,7 +693,7 @@
             <h4>
               ¿Cómo funciona la autenticación?
             </h4>
-            <div id="accordion">
+            <div id="accordion" class="accordion">
               <div class="card">
                 <div class="card-header" id="headingOne">
                   <h5 class="mb-0">
@@ -512,11 +869,140 @@
       </div>
     </div>
 
+    <div
+      class="modal fade"
+      id="funcContactsModal"
+      onclick="setScenes()"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h4>
+              ¿Cómo funciona la sincronización de contactos?
+            </h4>
+            <div id="contactsaccordion" class="accordion">
+              <div class="card">
+                <div class="card-header" id="contactsheadingOne">
+                  <h5 class="mb-0">
+                    <button
+                      class="btn btn-link"
+                      data-toggle="collapse"
+                      data-target="#contactscollapseOne"
+                      aria-expanded="true"
+                      aria-controls="contactscollapseOne"
+                    >
+                      Paso #1
+                    </button>
+                  </h5>
+                </div>
+
+                <div
+                  id="contactscollapseOne"
+                  class="collapse show"
+                  aria-labelledby="contactsheadingOne"
+                  data-parent="#contactsaccordion"
+                >
+                  <div class="card-body">
+                    La vista principal se da mediante la clase
+                    <code>ContactsController</code> la cual en primer lugar
+                    llama a la clase <code>ContactsFetcher</code> la cual accede
+                    a los contactos del usuario usando threads asíncronos y crea
+                    una variable con los contactos. <br /><br />
+
+                    <img class="w-100" src="./imgs/how/4_1.png" />
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="contactsheadingTwo">
+                  <h5 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed"
+                      data-toggle="collapse"
+                      data-target="#contactscollapseTwo"
+                      aria-expanded="false"
+                      aria-controls="contactscollapseTwo"
+                    >
+                      Paso #2
+                    </button>
+                  </h5>
+                </div>
+                <div
+                  id="contactscollapseTwo"
+                  class="collapse"
+                  aria-labelledby="contactsheadingTwo"
+                  data-parent="#contactsaccordion"
+                >
+                  <div class="card-body">
+                    También se usa la clase <code>FalconUserFetcher</code> en
+                    concurrencia asíncrona para leer todos los contactos en el
+                    teléfono, leer los números que se tiene en firebase y
+                    comprobar que contactos. <br /><br />
+                    <img class="w-100" src="./imgs/how/4_2.png" />
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="contactsheadingThree">
+                  <h5 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed"
+                      data-toggle="collapse"
+                      data-target="#contactscollapseThree"
+                      aria-expanded="false"
+                      aria-controls="contactscollapseThree"
+                    >
+                      Paso #3
+                    </button>
+                  </h5>
+                </div>
+                <div
+                  id="contactscollapseThree"
+                  class="collapse"
+                  aria-labelledby="contactsheadingThree"
+                  data-parent="#contactsaccordion"
+                >
+                  <div class="card-body">
+                    La vista se muestra en un <code>TableView</code> con 3
+                    secciones, en la primera sección se tiene un chat personal,
+                    en la segunda se tiene todos los contactos del usuario que
+                    también son usuarios de Falcon y en la tercera el resto de
+                    contactos. <br /><br />
+                    Si se selecciona un contacto que no use Falcon se llama a la
+                    clase <code>ContactsDetailController</code> donde se muestra
+                    una vista con un <code>TableView</code> con el nombre,
+                    número de teléfono y la opción de enviar un mensaje
+                    <br /><br />
+                    Para el manejo del buscador se accede a la clase
+                    <code>ContactsController + SearchHandlers</code> para
+                    manejar la búsqueda en tiempo real filtrando los usuarios
+                    que se muestran en cada sección del table view. <br /><br />
+                    <img src="./imgs/how/2_3.png" alt="" class="w-100" />
+                    <br /><br />
+                    Si el contacto si está registrado en falcon se accederá a la
+                    parte de chat con el contacto que se explicará
+                    posteriormente.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script
+      src="https://code.jquery.com/jquery-2.2.0.min.js"
+      type="text/javascript"
+    ></script>
+    <!-- <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
       integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
       crossorigin="anonymous"
-    ></script>
+    ></script> -->
     <script
       src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
       integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
@@ -528,7 +1014,11 @@
       crossorigin="anonymous"
     ></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+
     <script src="./script.js"></script>
     <script src="./sidebarController.js"></script>
+    <script src="./videoplayer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
+    <script src="./phoneScrollByStepsController.js"></script>
   </body>
 </html>

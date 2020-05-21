@@ -54,11 +54,6 @@ p {
   overflow: hidden;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 2s; /* Firefox < 16 */
-  -ms-animation: fadein 2s; /* Internet Explorer */
-  -o-animation: fadein 2s; /* Opera < 12.1 */
-  animation: fadein 2s;
   -ms-overflow-style: none;
 }
 
@@ -71,6 +66,18 @@ p {
   -ms-overflow-style: none;
 }
 .phone_2::-webkit-scrollbar {
+  display: none;
+}
+
+.phone_3 {
+  border: 40px solid #121212;
+  border-width: 55px 7px;
+  border-radius: 40px;
+  margin: 50px auto;
+  overflow: hidden;
+  -ms-overflow-style: none;
+}
+.phone_3::-webkit-scrollbar {
   display: none;
 }
 
@@ -109,7 +116,15 @@ p {
     0px 10px 20px #000;
 }
 
-#phone_2 {
+.phone_3.view_2 {
+  -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  box-shadow: 0px 3px 0 #000, 0px 4px 0 #000, 0px 5px 0 #000, 0px 7px 0 #000,
+    0px 10px 20px #000;
+}
+
+#phone_2,
+#phone_3 {
   opacity: 0;
   -webkit-transform: scale(0.8);
   -moz-transform: scale(0.8);
@@ -123,7 +138,8 @@ p {
   transition: all 1s ease-in-out;
 }
 
-#phone_2.visible {
+#phone_2.visible,
+#phone_3.visible {
   opacity: 1;
   -webkit-transform: none;
   -moz-transform: none;
@@ -247,6 +263,10 @@ p {
     margin: 0 0 0 -70px;
   }
   .phone_2 {
+    margin: 0 0 0 -70px;
+  }
+
+  .phone_3 {
     margin: 0 0 0 -70px;
   }
 }
@@ -438,7 +458,6 @@ p {
 }
 
 #content {
-  padding: 20px;
   width: 100%;
 }
 
@@ -509,23 +528,219 @@ p {
   background-color: rgb(29, 29, 29);
 }
 
-#accordion .card {
+.accordion .card {
   background-color: #1f2025;
 }
 
-#accordion button {
+.accordion button {
   color: #ccc;
   font-family: "DM Mono", monospace;
   font-weight: bolder;
 }
 
-#accordion button.collapsed {
+.accordion button.collapsed {
   color: #1ae891;
 }
 
-#accordion .card-body {
+.accordion .card-body {
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
   font-size: 0.7rem;
   background-color: #292a31;
+}
+
+.sugerenciasDiv {
+  width: 55vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -100vw;
+  background-color: #eee;
+  padding: 2%;
+  z-index: 10;
+  color: #1b1b1b;
+  overflow-y: scroll;
+}
+
+.sugerenciasDiv.show {
+  left: 0;
+  -webkit-animation: bounce-in-left 1.1s both;
+  animation: bounce-in-left 1.1s both;
+}
+
+@-webkit-keyframes bounce-in-left {
+  0% {
+    -webkit-transform: translateX(-600px);
+    transform: translateX(-600px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+    -webkit-transform: translateX(-68px);
+    transform: translateX(-68px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  72% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  81% {
+    -webkit-transform: translateX(-28px);
+    transform: translateX(-28px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  90% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  95% {
+    -webkit-transform: translateX(-8px);
+    transform: translateX(-8px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+@keyframes bounce-in-left {
+  0% {
+    -webkit-transform: translateX(-600px);
+    transform: translateX(-600px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+    -webkit-transform: translateX(-68px);
+    transform: translateX(-68px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  72% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  81% {
+    -webkit-transform: translateX(-28px);
+    transform: translateX(-28px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  90% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  95% {
+    -webkit-transform: translateX(-8px);
+    transform: translateX(-8px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+
+.cerrar {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+}
+
+section {
+  height: 100vh;
+}
+
+/* video background */
+
+.videoContainer {
+  margin-top: 80px;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+}
+.cover .hi {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  width: 30vw;
+  height: 10vh;
+  font-family: "Roboto Slab", serif;
+  font-size: 24px;
+  line-height: 26px;
+  text-align: center;
+}
+
+.screen {
+  max-width: 100%;
+  left: 0;
+  margin: auto;
+  opacity: 0;
+  transition: opacity 0.5s;
+  position: relative;
+  top: 0;
+  transform: translateY(-110px);
+}
+.screen.active {
+  opacity: 1;
+  max-width: 100%;
+}
+
+#s1 {
+  background-color: aqua;
+}
+
+#s2 {
+  background-color: rebeccapurple;
+}
+
+.foreground {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 10;
+  position: absolute;
 }
