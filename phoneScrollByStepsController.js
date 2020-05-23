@@ -16,7 +16,7 @@ $("#phone_1").bind("mousewheel", (e) => {
       dir: e.originalEvent.deltaY / Math.abs(e.originalEvent.deltaY),
     });
 
-    if (step < 4 || e.originalEvent.deltaY < 0) {
+    if (step < 100 || e.originalEvent.deltaY < 0) {
       if (e.originalEvent.deltaY > 0) {
         step = Math.min(4, step + 1);
       } else if (e.originalEvent.deltaY < 0) {

@@ -10,6 +10,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./ss_css.css" />
     <link rel="stylesheet" href="./timelineStyles.css" />
     <script
       src="https://kit.fontawesome.com/42bffecd35.js"
@@ -29,9 +30,30 @@
             <a id="resume" href="#uxSection" lang="es"> UI/UX</a>
           </li>
           <li>
-            <a id="projects" href="#performanceSection" lang="es">
-              Performance
+            <a
+              href="#performanceSubmenu"
+              data-toggle="collapse"
+              aria-expanded="false"
+              class="dropdown-toggle"
+            >
+              <span lang="es">Performance</span>
             </a>
+            <ul class="collapse list-unstyled" id="performanceSubmenu">
+              <li>
+                <a href="#performanceSeccion" style="cursor: pointer;">
+                  <small lang="es">Profiling</small>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#performanceSeccion"
+                  style="cursor: pointer;"
+                  id="abrirThreadsSeccion"
+                >
+                  <small lang="es">Manejo de Threads</small>
+                </a>
+              </li>
+            </ul>
           </li>
           <li>
             <a id="projects" href="#conectividadSection" lang="es">
@@ -42,11 +64,11 @@
             <hr />
           </li>
           <li>
-            <a id="contact" href="#contact" lang="es">
+            <a id="contact" href="#libreriasSection" lang="es">
               Librerías
             </a>
 
-            <a id="contact" href="#contact" lang="es">
+            <a id="contact" href="#generalidadesSection" lang="es">
               Generalidades
             </a>
           </li>
@@ -142,12 +164,20 @@
                         >
                           Funcionamiento
                         </button>
+
+                        <button
+                          type="button"
+                          id="antipatron1Button"
+                          class="btn btn-outline-warning"
+                        >
+                          <small>1 antipatrón</small>
+                        </button>
                         <button
                           type="button"
                           class="btn btn-outline-light"
                           id="mostrarCambios1"
                         >
-                          <small>Cambios sugeridos</small>
+                          <small>1 Cambio sugerido</small>
                         </button>
                       </div>
                       <br />
@@ -165,19 +195,19 @@
                       </p>
                       <br />
                       <div>
-                        <button type="button" class="btn btn-info">
-                          <small>Funcionamiento</small>
-                        </button>
-
                         <button
                           type="button"
                           class="btn btn-outline-light"
                           id="mostrarCambios2"
                         >
-                          <small>Cambios sugeridos</small>
+                          <small>1 Cambio sugerido</small>
                         </button>
-                        <button type="button" class="btn btn-outline-danger">
-                          <small>Excepciones</small>
+                        <button
+                          type="button"
+                          class="btn btn-outline-danger"
+                          id="abrirFalloExPic"
+                        >
+                          <small>1 Fallo crítico</small>
                         </button>
                       </div>
 
@@ -212,11 +242,106 @@
                           <small>Funcionamiento</small>
                         </button>
 
-                        <button type="button" class="btn btn-outline-light">
+                        <button
+                          type="button"
+                          id="mostrarCambios3"
+                          class="btn btn-outline-light"
+                        >
                           <small>Cambios sugeridos</small>
                         </button>
-                        <button type="button" class="btn btn-outline-danger">
-                          <small>Excepciones</small>
+                      </div>
+
+                      <br />
+                    </div>
+
+                    <!-- Flujo vista settings -->
+                    <div id="reveal5" class="content">
+                      <h2 class="left">vista 3: <strong>settings</strong></h2>
+
+                      <p>
+                        En esta vista el usuario puede editar la configuración
+                        básica de funcionamiento de la aplicación, así como su
+                        información básica de perfil.
+                      </p>
+
+                      <br />
+                      <div>
+                        <button
+                          id="funcSettingsButton"
+                          type="button"
+                          class="btn btn-info"
+                        >
+                          <small>Funcionamiento</small>
+                        </button>
+
+                        <button
+                          type="button"
+                          id="mostrarCambiosSettings"
+                          class="btn btn-outline-light"
+                        >
+                          <small>1 Cambio sugerido</small>
+                        </button>
+                      </div>
+
+                      <br />
+                    </div>
+
+                    <!-- Flujo vista lista chats -->
+                    <div id="reveal6" class="content">
+                      <h2 class="left">
+                        vista 3: <strong>Lista de chats</strong>
+                      </h2>
+
+                      <p>
+                        En esta vista el usuario puede ver sus conversaciones y
+                        realizar algunas acciones como eliminar, leer o
+                        archivar.
+                        <br /><br />
+                        También puede accender al perfil de usuario de las
+                        personas con quienes tiene conversaciones activas.
+                      </p>
+
+                      <br />
+                      <div>
+                        <button
+                          id="funchatsButton"
+                          type="button"
+                          class="btn btn-info"
+                        >
+                          <small>Funcionamiento</small>
+                        </button>
+                      </div>
+
+                      <br />
+                    </div>
+
+                    <!-- Flujo vista chatting  -->
+                    <div id="reveal7" class="content">
+                      <h2 class="left">vista 4: <strong>Chat</strong></h2>
+
+                      <p>
+                        En esta vista el usuario puede conversar con otros
+                        usuarios. Puede adjuntar elementos de texto, audio,
+                        imagen, o video.
+                        <br /><br />
+                      </p>
+
+                      <br />
+                      <div>
+                        <button
+                          id="funchattingButton"
+                          type="button"
+                          class="btn btn-info"
+                        >
+                          <small>Funcionamiento</small>
+                        </button>
+
+                        <button
+                          type="button"
+                          id="mostrarProblemasChat"
+                          class="btn btn-outline-danger"
+                        >
+                          <small>1 problema encontrado</small>
                         </button>
                       </div>
 
@@ -276,6 +401,38 @@
                           <img
                             id="img4"
                             src="./imgs/4.PNG"
+                            style="width: 257px;"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <div class="row" id="frame_5">
+                        <div class="col-12">
+                          <img
+                            id="img5"
+                            src="./imgs/5.PNG"
+                            style="width: 257px;"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+
+                      <div class="row" id="frame_6">
+                        <div class="col-12">
+                          <img
+                            id="img6"
+                            src="./imgs/6.jpeg"
+                            style="width: 257px;"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+
+                      <div class="row" id="frame_7">
+                        <div class="col-12">
+                          <img
+                            id="img7"
+                            src="./imgs/7.gif"
                             style="width: 257px;"
                             alt=""
                           />
@@ -352,7 +509,462 @@
         <!-- ********************** -->
         <div id="performanceSeccion" class="videoContainer">
           <div class="screen mute" id="tv"></div>
-          <div class="foreground"></div>
+          <div class="foreground">
+            <div class="card card-body" class="profCard">
+              <small>
+                <b>
+                  Este análisis se realiza en un iPhone 11 Pro y se evidencia:
+                  (Es importante mencionar que los segundos y minutos que se
+                  mencionan son de acuerdo al contador de tiempo de instruments)
+                </b>
+              </small>
+              <br />
+              <p>
+                La temperatura del celular no aumenta demasiado con el uso de la
+                aplicación
+                <br /><br />
+                Por lo general el consumo de red es bajo. Y la sincronización
+                general de los contactos.
+              </p>
+              <div class="row">
+                <div class="col-4">
+                  <nav class="timeline__nav">
+                    <ul>
+                      <li><span>00:18</span></li>
+                      <li><span>00:45</span></li>
+                      <li><span>00:57</span></li>
+                      <li><span>01:08</span></li>
+                      <li><span>01:12</span></li>
+                      <li><span>01:17</span></li>
+                      <li><span>01:27</span></li>
+                    </ul>
+                  </nav>
+                </div>
+                <div
+                  class="col-8"
+                  id="profilingTimes"
+                  style="overflow-y: scroll; height: 50vh;"
+                >
+                  <section class="timeline__section" style="font-size: 0.8em;">
+                    <h2 class="milestone">00:18</h2>
+                    <p>
+                      En cuanto a memoria, en el segundo 18 hay un aumento de
+                      memoria de 21,26 MiB a 26,52MiB debido a que se carga la
+                      imagen que el usuario tenía de perfil.
+                    </p>
+                    <h2 class="milestone">00:45</h2>
+                    <p>
+                      Aumenta en el segundo 45 debido a que se está enviando la
+                      nueva información del usuario y se tienen que cargar los
+                      chats y las imágenes de los contactos registrados en
+                      Falcon messenger.
+                    </p>
+                    <h2 class="milestone">00:57</h2>
+                    <p>
+                      En el segundo 57 que pasa de 26,52MiB a 50,10 MiB se da
+                      porque al cargarse los chats del usuario se tienen que
+                      cargar las imágenes miniatura de los usuarios y
+                      sincronizar los contactos.
+                    </p>
+                    <h2 class="milestone">01:08</h2>
+                    <p>
+                      En el minuto 1:08 aumenta debido a que se está enviando el
+                      archivo de audio entonces tiene que guardarlo en firebase.
+                    </p>
+
+                    <h2 class="milestone">01:12</h2>
+                    <p>
+                      Posteriormente en el minuto 1:12 hay un aumento a 55,59MiB
+                      debido a que se carga la foto de la galería del celular.
+                    </p>
+
+                    <h2 class="milestone">01:17</h2>
+                    <p>
+                      En el minuto 1:17 es donde más alto se da el consumo de
+                      red que llega hasta 196,59KiB debido a que se realiza el
+                      envío de una imagen y se tiene que cargar a firebase.
+                    </p>
+
+                    <h2 class="milestone">01:27</h2>
+                    <p>
+                      Posteriormente en el minuto 1:27 pasa a 66,05 MiB debido a
+                      que se tiene que se amplía la imagen del usuario por lo
+                      que se guarda. Igualmente ocurre cuando se abre la imagen
+                      de perfil de un contacto. En general la cantidad de
+                      memoria es buena ya que no pasa de 90MiB.
+                    </p>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="threadsSpace" class="threadsSpace">
+            <div class="cerrar" id="cerrarThreadsSeccion">
+              <span style="font-size: 2rem;">&times;</span>
+            </div>
+            <h4>Threads <small>Y cómo éstos afectan el performance</small></h4>
+            <nav>
+              <div
+                class="nav nav-tabs"
+                id="nav-tab"
+                role="tablist"
+                style="border-bottom: 1px solid #1b1b1b;"
+              >
+                <a
+                  class="nav-item nav-link active"
+                  id="nav-threadAvatarOpener-tab"
+                  data-toggle="tab"
+                  href="#nav-threadAvatarOpener"
+                  role="tab"
+                  aria-controls="nav-threadAvatarOpener"
+                  aria-selected="true"
+                  style="
+                    border: 1px solid #1b1b1b;
+                    border-bottom: none;
+                    border-right: none;
+                  "
+                  >AvatarOpener (fallo crítico)</a
+                >
+                <a
+                  class="nav-item nav-link"
+                  style="border: 1px solid #1b1b1b; border-bottom: none;"
+                  id="nav-contactsSync-tab"
+                  data-toggle="tab"
+                  href="#nav-contactsSync"
+                  role="tab"
+                  aria-controls="nav-contactsSync"
+                  aria-selected="true"
+                  >Contactos</a
+                >
+
+                <a
+                  class="nav-item nav-link"
+                  style="border: 1px solid #1b1b1b; border-bottom: none;"
+                  id="nav-chatting-tab"
+                  data-toggle="tab"
+                  href="#nav-chatting"
+                  role="tab"
+                  aria-controls="nav-chatting"
+                  aria-selected="true"
+                  >Chatting</a
+                >
+              </div>
+            </nav>
+
+            <div class="tab-content" id="nav-threads-tabContent">
+              <div
+                class="tab-pane fade show active"
+                id="nav-threadAvatarOpener"
+                role="tabpanel"
+                aria-labelledby="nav-threadAvatarOpener-tab"
+              >
+                <br />
+                <p>
+                  La librería <code><b>AvatarOpener</b></code> maneja threads en
+                  dos partes importantes: cuando ya se tiene la imagen después
+                  de editarla y se quiere guardar, y cuando se tiene la imagen
+                  inicial pero se quiere borrar. Aunque para la última sólo se
+                  usa para mostrar el <code>ActivityIndicator</code>. Todo esto
+                  está en el delegado de <code>AvatarOpener</code>
+                </p>
+
+                <div class="codigo">
+                  <p>
+                    <button
+                      id="verCodThr1"
+                      class="btn btn-outline-secondary btn-sm btn-block"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#cod1coll"
+                      aria-expanded="false"
+                      aria-controls="cod1coll"
+                    >
+                      Ocultar código
+                    </button>
+                  </p>
+                  <div class="collapse show" id="cod1coll">
+                    <div class="card card-body codigoCard">
+                      <img src="./imgs/threads/1_1.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+
+                <p>
+                  Para los dos casos se muestra un
+                  <code>ActivityIndicator</code> en el centro de la imagen, para
+                  esto se hizo una extensión de <code>UIImageView</code> ubicada
+                  en Support/Public en la clase <code>Public</code>. La cual
+                  primero hace los ajustes de tamaño y constrains del
+                  <code>activityIndicator</code> y luego lo muestra mediante un
+                  <code>DispatcQueue.main.async</code>. Esto se hace de esta
+                  manera (<code>async</code>) debido a que la acción no requiere
+                  esperar a que el anterior bloque termine sino que se ejecuta
+                  directamente.
+                </p>
+
+                <div class="codigo">
+                  <p>
+                    <button
+                      class="btn btn-outline-secondary btn-sm btn-block"
+                      type="button"
+                      id="verCodThr2"
+                      data-toggle="collapse"
+                      data-target="#cod2coll"
+                      aria-expanded="false"
+                      aria-controls="cod2coll"
+                    >
+                      Ver código
+                    </button>
+                  </p>
+                  <div class="collapse" id="cod2coll">
+                    <div class="card card-body codigoCard">
+                      <img src="./imgs/threads/1_2.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+
+                <p>
+                  Para el caso de actualizar la foto del usuario se llama al
+                  método
+                  <code>updateUserProfile</code>. Este método lo que hace
+                  principalmente es crear una imagen miniatura llamando al
+                  método <code>creteImageThumbnail</code> de la clase public.
+                  Luego crea un <code>DispatchGroup</code> y manda dos threads,
+                  un thread persiste la imagen grande y el otro la imagen en
+                  miniatura.
+                </p>
+
+                <div class="codigo">
+                  <p>
+                    <button
+                      class="btn btn-outline-secondary btn-sm btn-block"
+                      type="button"
+                      id="verCodThr3"
+                      data-toggle="collapse"
+                      data-target="#cod3coll"
+                      aria-expanded="false"
+                      aria-controls="cod3coll"
+                    >
+                      Ver código
+                    </button>
+                  </p>
+                  <div class="collapse" id="cod3coll">
+                    <div class="card card-body codigoCard">
+                      <img src="./imgs/threads/1_3.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+
+                <p>
+                  A su vez, el uso actual de Threads en la librería
+                  <b class="text-danger">está generando un fallo</b> en el flujo
+                  normal de la aplicación, haciendo que ésta quede en espera
+                  prologanda o permanente. Esto ocasiona que el usuario no pueda
+                  usar la aplicación indefinida. La buena noticia es que
+                  <b>logramos identificar el error</b> y hacer los cambios para
+                  que esta falla no ocurra más. Si desea saber al respecto, siga
+                  el siguiente enlace 🤓👉🏻
+                  <b
+                    class="text-success"
+                    style="cursor: pointer;"
+                    id="bugthreadsArreglacionEnlace1"
+                    >arreglo del fallo</b
+                  >
+                </p>
+              </div>
+
+              <div
+                class="tab-pane fade"
+                id="nav-contactsSync"
+                role="tabpanel"
+                aria-labelledby="nav-contactsSync-tab"
+              >
+                <br />
+                <p>
+                  Se usan threads para obtener todos los contactos del teléfono.
+                </p>
+
+                <div class="codigo">
+                  <p>
+                    <button
+                      class="btn btn-outline-secondary btn-sm btn-block"
+                      type="button"
+                      id="verCodThr2_1"
+                      data-toggle="collapse"
+                      data-target="#cod2_1coll"
+                      aria-expanded="false"
+                      aria-controls="cod2_1coll"
+                    >
+                      Ocultar código
+                    </button>
+                  </p>
+                  <div class="collapse show" id="cod2_1coll">
+                    <div class="card card-body codigoCard">
+                      <img src="./imgs/threads/2_1.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+
+                <p>
+                  Se usan threads para verificar cuáles de los contactos cuentan
+                  con un teléfono registrado en la base de datos. Esta función
+                  puede ser asíncrona o sincrónicamente.
+                </p>
+
+                <div class="codigo">
+                  <p>
+                    <button
+                      class="btn btn-outline-secondary btn-sm btn-block"
+                      type="button"
+                      id="verCodThr2_2"
+                      data-toggle="collapse"
+                      data-target="#cod2_2coll"
+                      aria-expanded="false"
+                      aria-controls="cod2_2coll"
+                    >
+                      Ver código
+                    </button>
+                  </p>
+                  <div class="collapse" id="cod2_2coll">
+                    <div class="card card-body codigoCard">
+                      <img src="./imgs/threads/2_2.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+
+                <p>
+                  Es importante resaltar que así se tengan implementadas formas
+                  asíncronas y sincrónicas para sincronizar los contactos con
+                  los registrados, siempre se utiliza la implementación
+                  asincrónica. Como se evidencia en la imagen de abajo la
+                  función <code>fetchFalconUsers</code> es la que contiene los
+                  dos métodos. Esta función como se puede ver solo se llama en
+                  dos ocaciones y las dos usan como parámetro:
+                  <code>“asynchronously: true</code>”
+                </p>
+
+                <div class="codigo">
+                  <p>
+                    <button
+                      class="btn btn-outline-secondary btn-sm btn-block"
+                      type="button"
+                      id="verCodThr2_3"
+                      data-toggle="collapse"
+                      data-target="#cod2_3coll"
+                      aria-expanded="false"
+                      aria-controls="cod2_3coll"
+                    >
+                      Ver código
+                    </button>
+                  </p>
+                  <div class="collapse" id="cod2_3coll">
+                    <div class="card card-body codigoCard">
+                      <img src="./imgs/threads/2_3.png" alt="" />
+                      <hr />
+                      <img src="./imgs/threads/2_4.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+
+                <p>
+                  Se usa la clase <code>ViewPlaceHolder</code> para mostrar
+                  mensajes en caso de que haya algún problema como que no se
+                  puede acceder a los contactos o para informar al usuario cosas
+                  como que no ha iniciado ningún chat. Esta consiste en un
+                  título y un subtítulo que se muestra. Se usan threads para
+                  quitar o poner el placeholder en las vistas.
+                </p>
+
+                <div class="codigo">
+                  <p>
+                    <button
+                      class="btn btn-outline-secondary btn-sm btn-block"
+                      type="button"
+                      id="verCodThr2_4"
+                      data-toggle="collapse"
+                      data-target="#cod2_4coll"
+                      aria-expanded="false"
+                      aria-controls="cod2_4coll"
+                    >
+                      Ver código
+                    </button>
+                  </p>
+                  <div class="collapse" id="cod2_4coll">
+                    <div class="card card-body codigoCard">
+                      <img src="./imgs/threads/2_5.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--  *-->
+              <!-- threads en chatting -->
+              <!--  *-->
+              <div
+                class="tab-pane fade"
+                id="nav-chatting"
+                role="tabpanel"
+                aria-labelledby="nav-chatting-tab"
+              >
+                <br />
+                <p>
+                  Se usan threads cuando se está creando un nuevo grupo para
+                  ocultar el indicador de carga, enviar el mensaje notificando a
+                  todos los usuarios del nuevo grupo y volver a la pantalla
+                  principal de chats.
+                </p>
+
+                <div class="codigo">
+                  <p>
+                    <button
+                      class="btn btn-outline-secondary btn-sm btn-block"
+                      type="button"
+                      id="verCodThr3_1"
+                      data-toggle="collapse"
+                      data-target="#cod3_1coll"
+                      aria-expanded="false"
+                      aria-controls="cod3_1coll"
+                    >
+                      Ocultar código
+                    </button>
+                  </p>
+                  <div class="collapse show" id="cod3_1coll">
+                    <div class="card card-body codigoCard">
+                      <img src="./imgs/threads/3_1.png" alt="" />
+                      <hr />
+                      <img src="./imgs/threads/3_2.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+
+                <p>
+                  Cuando se envían elementos multimedia se utilizan threads para
+                  cargar cada uno a la base de datos.
+                </p>
+
+                <div class="codigo">
+                  <p>
+                    <button
+                      class="btn btn-outline-secondary btn-sm btn-block"
+                      type="button"
+                      id="verCodThr3_2"
+                      data-toggle="collapse"
+                      data-target="#cod3_2coll"
+                      aria-expanded="false"
+                      aria-controls="cod3_2coll"
+                    >
+                      Ver código
+                    </button>
+                  </p>
+                  <div class="collapse" id="cod3_2coll">
+                    <div class="card card-body codigoCard">
+                      <img src="./imgs/threads/3_2.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- *********************** -->
@@ -373,10 +985,10 @@
                 Steps donde la conectividad importa 🤓
               </h1>
             </div>
-            <ul class="timeline">
+            <ul id="stepsTimeline" class="timeline">
               <li>
                 <div class="timeline-badge">
-                  <i class="fas fa-sms"></i>
+                  <i class="fas fa-mobile-alt"></i>
                 </div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">
@@ -413,7 +1025,7 @@
                 <div class="timeline-panel">
                   <div class="timeline-heading">
                     <h4 class="timeline-title">
-                      Verificación del código TSA
+                      Verificación del código <i>Two Steps Auth</i>
                     </h4>
                     <p>
                       <small class="text-muted"
@@ -441,7 +1053,7 @@
                   </div>
                 </div>
               </li>
-              <li>
+              <li class="timeline-inverted">
                 <div class="timeline-badge info">
                   <i class="fas fa-user-alt"></i>
                 </div>
@@ -474,6 +1086,26 @@
                   </div>
                 </div>
               </li>
+              <li>
+                <div class="timeline-badge danger">
+                  <i class="fas fa-comment-dots"></i>
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4 class="timeline-title">
+                      Zona de Chatting
+                    </h4>
+                    <p>
+                      <small class="text-muted"
+                        >Lista de mensajes y chat
+                      </small>
+                    </p>
+                  </div>
+                  <div class="timeline-body">
+                    <img class="w-100" src="./imgs/ev_conn/3_1.png" alt="" />
+                  </div>
+                </div>
+              </li>
             </ul>
           </div>
         </section>
@@ -484,23 +1116,675 @@
         <!-- ********************** -->
         <!-- ********************** -->
 
-        <section>
+        <section id="libreriasSection">
           <div class="container">
+            <div class="row" style="text-align: center;">
+              <div class="col">
+                <h2>Librerías</h2>
+                <hr />
+              </div>
+            </div>
+
+            <!-- **************** -->
+            <!-- Primera libreria -->
+            <!-- **************** -->
+
             <div class="row">
               <div class="col-md-4">
-                <button lang="en" type="submit" class="button submit-contact">
-                  Say hi!
-                </button>
+                <div id="inner_wrap">
+                  <!--The Main Thing-->
+                  <div id="wrapper" style="perspective: 1300px;">
+                    <div
+                      class="phone view_2"
+                      id="phone_4"
+                      style="width: 217px; height: 531px; overflow-y: scroll;"
+                    >
+                      <div class="row">
+                        <div class="col-12">
+                          <div class="row">
+                            <div class="col-12">
+                              <img
+                                id="img_phone3"
+                                src="./imgs/1_night.jpeg"
+                                style="width: 200px;"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="col-md-4">
-                <button lang="en" type="submit" class="button submit-contact">
-                  Say hi!
-                </button>
+
+              <div class="col-md-8 leftline">
+                <h5>
+                  <b>
+                    1. ThemeManager - Local
+                  </b>
+                </h5>
+                <p>
+                  Se encuentra en Support/ThemeManager <br /><br />
+                  Se usa para cambiar la vista general de la aplicación entre
+                  oscuro y claro mediante el método <code>applyTheme</code>.
+                  Esto cambio los colores generales de fondo y letra de
+                  <code>TabBar</code>, <code>NavigationBar</code>,
+                  <code>TableViewCell</code> , Botones y <code>TextField</code>
+                </p>
+                <br />
+                <img src="./imgs/libs/1_1.png" alt="" />
               </div>
+            </div>
+            <div class="row">
+              <div class="col"><hr /></div>
+            </div>
+
+            <!-- **************** -->
+            <!-- Segunda libreria -->
+            <!-- **************** -->
+
+            <div class="row">
               <div class="col-md-4">
-                <button lang="en" type="submit" class="button submit-contact">
-                  Say hi!
-                </button>
+                <div id="inner_wrap">
+                  <div id="wrapper" style="perspective: 1300px;">
+                    <div
+                      class="phone view_2"
+                      id="phone_5"
+                      style="width: 217px; height: 531px; overflow-y: scroll;"
+                    >
+                      <div class="row">
+                        <div class="col-12">
+                          <div class="row">
+                            <div class="col-12">
+                              <img
+                                id="img_phone3"
+                                src="./imgs/libs/0_1.jpeg"
+                                style="width: 200px;"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-8 leftline">
+                <h5>
+                  <b>
+                    2. ARSLineProgress - Externa
+                  </b>
+                </h5>
+                <p>
+                  Se usa la librería <code>ARSLineProgress</code> para mostrar
+                  la animación en el centro de la pantalla que indica al usuario
+                  que está procesando.
+                </p>
+                <br />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col"><hr /></div>
+            </div>
+
+            <!-- **************** -->
+            <!-- tercera libreria -->
+            <!-- **************** -->
+
+            <div class="row">
+              <div class="col-md-4">
+                <div id="inner_wrap">
+                  <div id="wrapper" style="perspective: 1300px;">
+                    <div
+                      class="phone view_2"
+                      id="phone_6"
+                      style="width: 217px; height: 531px; overflow-y: scroll;"
+                    >
+                      <div class="row">
+                        <div class="col-12">
+                          <div class="row">
+                            <div class="col-12">
+                              <img
+                                id="img_phone3"
+                                src="./imgs/libs/0_2.PNG"
+                                style="width: 200px;"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-8 leftline">
+                <h5>
+                  <b>
+                    3. AvatarOpener - Usa un pod externo para la edición
+                  </b>
+                </h5>
+                <p>
+                  <br />Se encuentra en Support/UserProfilePictureOpener
+                  <br />Se usa para controlar todo el acceso relacionado a las
+                  imágenes. <br />
+                </p>
+                <br />
+                <h6></h6>
+                <div id="avatarOpeneraccordion" class="accordion">
+                  <div class="card">
+                    <div class="card-header" id="avatarOpenerheadingOne">
+                      <h5 class="mb-0">
+                        <button
+                          class="btn btn-link collapsed"
+                          data-toggle="collapse"
+                          data-target="#avatarOpenercollapseOne"
+                          aria-expanded="true"
+                          aria-controls="avatarOpenercollapseOne"
+                        >
+                          Paso #1
+                        </button>
+                      </h5>
+                    </div>
+
+                    <div
+                      id="avatarOpenercollapseOne"
+                      class="collapse show"
+                      aria-labelledby="avatarOpenerheadingOne"
+                      data-parent="#avatarOpeneraccordion"
+                    >
+                      <div class="card-body">
+                        Se iniciativa llamando a la función
+                        <code>handleAvatarOpening</code>
+                        recibe una imagen, un controlador, una variable que
+                        define si la foto se puede editar y un título. Con esto
+                        construye la vista. Si no existe aún una foto llama al
+                        método
+                        <code>openPhotoManager</code> y si ya existe llama al
+                        método <code>openAvatar</code>. <br /><br />
+
+                        <img src="./imgs/libs/3_1.png" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" id="avatarOpenerheadingTwo">
+                      <h5 class="mb-0">
+                        <button
+                          class="btn btn-link collapsed"
+                          data-toggle="collapse"
+                          data-target="#avatarOpenercollapseTwo"
+                          aria-expanded="false"
+                          aria-controls="avatarOpenercollapseTwo"
+                        >
+                          Paso #2
+                        </button>
+                      </h5>
+                    </div>
+                    <div
+                      id="avatarOpenercollapseTwo"
+                      class="collapse"
+                      aria-labelledby="avatarOpenerheadingTwo"
+                      data-parent="#avatarOpeneraccordion"
+                    >
+                      <div class="card-body">
+                        El método openAvatar muestra directamente la foto junto
+                        con una botón de editar o compartir <br /><br />
+                        El método <code>openPhotoManager</code>, como se da
+                        cuando no existe una foto, despliega al usuario una
+                        alerta para que elija entre elegir una foto de la
+                        biblioteca (<code>openGallery</code>) o tomar una foto
+                        con la cámara (<code>openCamera</code>). - Los métodos
+                        <code>openGallery</code>era primero hacen todas las
+                        validaciones de permisos antes de acceder y si no tienen
+                        permiso muestran alerta <br /><br />
+                        <img src="./imgs/libs/3_2.png" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" id="avatarOpenerheadingThree">
+                      <h5 class="mb-0">
+                        <button
+                          class="btn btn-link collapsed"
+                          data-toggle="collapse"
+                          data-target="#avatarOpenercollapseThree"
+                          aria-expanded="false"
+                          aria-controls="avatarOpenercollapseThree"
+                        >
+                          Paso #3
+                        </button>
+                      </h5>
+                    </div>
+                    <div
+                      id="avatarOpenercollapseThree"
+                      class="collapse"
+                      aria-labelledby="avatarOpenerheadingThree"
+                      data-parent="#avatarOpeneraccordion"
+                    >
+                      <div class="card-body">
+                        Cuando ya se tomó la foto o se seleccionó de la galería,
+                        se usa <code>CropViewController</code>
+                        externo) para posteriormente editarla con opciones
+                        básicas de edición: Girar, restaurar y editar tamaño.
+                        <br /><br />
+                        <img src="./imgs/libs/3_4.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col"><hr /></div>
+            </div>
+
+            <!-- **************** -->
+            <!-- Cuarta  libreria -->
+            <!-- **************** -->
+
+            <div class="row">
+              <div class="col-md-4">
+                <div id="inner_wrap">
+                  <div id="wrapper" style="perspective: 1300px;">
+                    <div
+                      class="phone view_2"
+                      id="phone_7"
+                      style="width: 217px; height: 531px; overflow-y: scroll;"
+                    >
+                      <div class="row">
+                        <div class="col-12">
+                          <div class="row">
+                            <div class="col-12">
+                              <img
+                                id="img_phone3"
+                                src="./imgs/2_1.PNG"
+                                style="width: 200px;"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-8 leftline">
+                <h5>
+                  <b>
+                    4. Public - Local
+                  </b>
+                </h5>
+                <p>
+                  Se encuentra en Support/Public <br />
+                  En general tiene varias cosas más relacionadas al manejo de
+                  archivos, imágenes y también de la parte gráfica como scroll o
+                  mostrar y ocultar ciertos elementos gráficos. Sin embargo,
+                  también contiene diversas extensiones que se usan a lo largo
+                  de toda la aplicación. Por ejemplo:
+                </p>
+
+                <div class="codigo">
+                  <p>
+                    <button
+                      class="btn btn-outline-secondary btn-sm btn-block"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#lib4cod1coll"
+                      aria-expanded="false"
+                      aria-controls="lib4cod1coll"
+                    >
+                      <small
+                        >Ordena elementos de un array por secciones, separa
+                        elementos de un array entre los que coinciden con un
+                        patrón específico y los que no.</small
+                      >
+                    </button>
+                  </p>
+                  <div class="collapse" id="lib4cod1coll">
+                    <div class="card card-body codigoCard">
+                      <img src="./imgs/libs/4_1.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="codigo">
+                  <p>
+                    <button
+                      class="btn btn-outline-secondary btn-sm btn-block"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#lib4cod2coll"
+                      aria-expanded="false"
+                      aria-controls="lib4cod2coll"
+                    >
+                      <small>
+                        Tiene diversas constantes como los mensajes al solicitar
+                        permisos al usuario o de errores que pueden
+                        surgir.</small
+                      >
+                    </button>
+                  </p>
+                  <div class="collapse" id="lib4cod2coll">
+                    <div class="card card-body codigoCard">
+                      <img src="./imgs/libs/4_2.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="codigo">
+                  <p>
+                    <button
+                      class="btn btn-outline-secondary btn-sm btn-block"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#lib4cod3coll"
+                      aria-expanded="false"
+                      aria-controls="lib4cod3coll"
+                    >
+                      <small>
+                        Tiene extensiones para controlar la navegación por la
+                        aplicación.</small
+                      >
+                    </button>
+                  </p>
+                  <div class="collapse" id="lib4cod3coll">
+                    <div class="card card-body codigoCard">
+                      <img src="./imgs/libs/4_3.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+                <div class="codigo">
+                  <p>
+                    <button
+                      class="btn btn-outline-secondary btn-sm btn-block"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#lib4cod4coll"
+                      aria-expanded="false"
+                      aria-controls="lib4cod4coll"
+                    >
+                      <small>
+                        Tiene extensiones relacionadas al formato de fechas y
+                        obtención de datos a partir de fechas.</small
+                      >
+                    </button>
+                  </p>
+                  <div class="collapse" id="lib4cod4coll">
+                    <div class="card card-body codigoCard">
+                      <img src="./imgs/libs/4_4.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+                <div class="codigo">
+                  <p>
+                    <button
+                      class="btn btn-outline-secondary btn-sm btn-block"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#lib4cod5coll"
+                      aria-expanded="false"
+                      aria-controls="lib4cod5coll"
+                    >
+                      <small> Tiene funciones para mostrar alertas.</small>
+                    </button>
+                  </p>
+                  <div class="collapse" id="lib4cod5coll">
+                    <div class="card card-body codigoCard">
+                      <img src="./imgs/libs/4_5.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+                <div class="codigo">
+                  <p>
+                    <button
+                      class="btn btn-outline-secondary btn-sm btn-block"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#lib4cod6coll"
+                      aria-expanded="false"
+                      aria-controls="lib4cod6coll"
+                    >
+                      <small>
+                        Tiene la parte de comprobación de accesibilidad a
+                        internet.</small
+                      >
+                    </button>
+                  </p>
+                  <div class="collapse" id="lib4cod6coll">
+                    <div class="card card-body codigoCard">
+                      <img src="./imgs/libs/4_6.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+                <br />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col"><hr /></div>
+            </div>
+
+            <!-- **************** -->
+            <!-- Quinta  libreria -->
+            <!-- **************** -->
+
+            <div class="row">
+              <div class="col-md-4">
+                <div id="inner_wrap">
+                  <div id="wrapper" style="perspective: 1300px;">
+                    <div
+                      class="phone view_2"
+                      id="phone_8"
+                      style="width: 217px; height: 531px; overflow-y: scroll;"
+                    >
+                      <div class="row">
+                        <div class="col-12">
+                          <div class="row">
+                            <div class="col-12">
+                              <img
+                                id="img_phone3"
+                                src="./imgs/2_1.PNG"
+                                style="width: 200px;"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-8 leftline">
+                <h5>
+                  <b>
+                    5. SDWebImage
+                  </b>
+                </h5>
+                <p>
+                  Esta librería se usa cuando se recuperan las imágenes de
+                  internet y guardarlas en caché. Por ejemplo cuando se descarga
+                  la foto de usuario en Falcon de un contacto y se muestra en
+                  una tabla.
+                </p>
+                <div class="card card-body codigoCard">
+                  <img src="./imgs/libs/4_1.png" alt="" />
+                </div>
+                <br />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col"><hr /></div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="generalidadesSection"
+          style="padding: 5%; background-color: #eee; height: 150vh;"
+        >
+          <div
+            class="row"
+            style="text-align: center; color: #111; margin-top: 10px;"
+          >
+            <h3 style="margin: 0 auto;">
+              Generalidades
+              <small>(puede hacer scroll dentro de las vistas)</small>
+            </h3>
+          </div>
+
+          <div class="row h-100">
+            <div class="col-lg-6">
+              <div class="row h-33">
+                <div class="col genItem left">
+                  <div class="card left">
+                    <div class="card-header" style="background-color: #1a7ef6;">
+                      Arquitectura y patrones
+                    </div>
+                    <div class="card-body">
+                      <p>
+                        En general la aplicación utiliza el patrón de
+                        arquitectura modelo, vista, controlador ya que es lo
+                        común en las aplicaciones de iOS. <br /><br />
+                        Se evidencia el uso constante del patrón de diseño
+                        observer ya que la aplicación en general tiene que estar
+                        pendiente cuando cambia el tema de la aplicación general
+                        y cuando hay algún cambio en los chats como que llegue
+                        un mensaje nuevo, se cree un nuevo grupo o se edite
+                        alguna configuración.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row h-33">
+                <div class="col genItem left">
+                  <div class="card left">
+                    <div class="card-header" style="background-color: #f1853b;">
+                      Caché
+                    </div>
+                    <div class="card-body">
+                      <p>
+                        La aplicación en general usa caché para el
+                        almacenamiento de imágenes que se muestran
+                        frecuentemente como la foto de un contacto o la foto de
+                        perfil personal. Para esto se usa la librería
+                        SDWebImage.
+                      </p>
+                      <br />
+
+                      <div class="card card-body codigoCard">
+                        <img src="./imgs/gen/1_1.png" alt="" />
+                      </div>
+                      <br />
+                      <br />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row h-33">
+                <div class="col genItem left">
+                  <div class="card left">
+                    <div
+                      class="card-header"
+                      style="background-color: turquoise;"
+                    >
+                      Permisos
+                    </div>
+                    <div class="card-body">
+                      <p>
+                        En general, la aplicación maneja correctamente el uso de
+                        sus recursos y los permisos que requiere del usuario. No
+                        le solicita fuera de contexto acceso adicional o
+                        permisos extra.
+                      </p>
+
+                      <img class="w-100" src="./imgs/gen/per_1.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="row h-50">
+                <div class="col genItem right">
+                  <div class="card right">
+                    <div class="card-header" style="background-color: #405659;">
+                      Pull Request
+                    </div>
+                    <div class="card-body">
+                      <div class="card-body">
+                        <p>
+                          Se realizó pull request al repositorio principal para
+                          que todos los cambios propuestos implementados sean
+                          parte del proyecto oficial.
+                        </p>
+                        <br /><br />
+
+                        <img class="w-100" src="./imgs/gen/pull_1.png" alt="" />
+
+                        <br />
+                        <br />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row h-50">
+                <div class="col genItem right">
+                  <div class="card right">
+                    <div class="card-header" style="background-color: #a6356d;">
+                      Repositorio
+                    </div>
+                    <div class="card-body">
+                      <p>
+                        El repositorio actualmente cuenta con 237 estrellas y
+                        tiene 72 Forks. <br /><br />
+                        Es necesario resaltar que todo el código estaba en
+                        <code>Swift 4.3</code> y se realizaron todas las
+                        modificaciones necesarias para que esté ahora en
+                        <code>Swift 5</code>
+                      </p>
+
+                      <div style="width: 400px; height: 332px; margin: 0 auto;">
+                        <div
+                          class="github-card"
+                          data-github="RMizin/FalconMessenger"
+                          data-width="400"
+                          data-height="332"
+                          data-theme="medium"
+                        ></div>
+                      </div>
+                      <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+
+                      <br />
+
+                      <p>
+                        Tiene 7 issues reportados que están abiertos y 5
+                        cerrados
+                      </p>
+
+                      <img src="./imgs/gen/repo_1.png" class="w-100" alt="" />
+
+                      <br />
+
+                      <p>
+                        Cuenta con dos contribuidores principales a la rama
+                        Master pero según el número de commits se podría decir
+                        que solo RMizin.
+                      </p>
+
+                      <img src="./imgs/gen/repo_2.png" class="w-100" alt="" />
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -659,6 +1943,236 @@
       </div>
     </div>
 
+    <div id="sugerencias3" class="sugerenciasDiv">
+      <div class="cerrar" id="cerrarSugenrencias3">
+        <span style="font-size: 2rem;">&times;</span>
+      </div>
+      <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <a
+            class="nav-item nav-link active"
+            id="nav-cambio2-tab"
+            data-toggle="tab"
+            href="#nav-cambio2"
+            role="tab"
+            aria-controls="nav-cambio2"
+            aria-selected="true"
+            >Cambio #1</a
+          >
+        </div>
+      </nav>
+
+      <div class="tab-content" id="nav-tabContent">
+        <div
+          class="tab-pane fade show active"
+          id="nav-cambio2"
+          role="tabpanel"
+          aria-labelledby="nav-cambio2-tab"
+        >
+          <div class="row">
+            <div class="col-12">
+              <br />
+              <p>
+                Se muestran errores en la clase <code>ViewPlaceHolder</code> y
+                <code>ContactsControoler</code> ya que se intentan llamar cosas
+                que se deberían llamar desde el main thread desde diferentes
+                threads. Se recomienda agregar el código que se muestra a
+                continuación para utilizar el main thread correctamente en dónde
+                se usa concurrencia y mejorando los tiempos de carga.
+                <br /><br />
+              </p>
+
+              <img class="w-100" src="./imgs/cambios/s2_c1_1.png" alt="" />
+              <br /><br />
+              <img class="w-100" src="./imgs/cambios/s2_c1_2.png" alt="" />
+              <br /><br />
+
+              <img class="w-100" src="./imgs/cambios/s2_c1_3.png" alt="" />
+              <br /><br />
+              <h4 class="text-success">Después</h4>
+              <img class="w-100" src="./imgs/cambios/s2_c1_4.png" alt="" />
+              <br /><br />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="sugerencias4" class="sugerenciasDiv">
+      <div class="cerrar" id="cerrarSugenrencias4">
+        <span style="font-size: 2rem;">&times;</span>
+      </div>
+      <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <a
+            class="nav-item nav-link active"
+            id="nav-cambio1settings-tab"
+            data-toggle="tab"
+            href="#nav-cambio2"
+            role="tab"
+            aria-controls="nav-cambio1settings"
+            aria-selected="true"
+            >Cambio #1</a
+          >
+        </div>
+      </nav>
+
+      <div class="tab-content" id="nav-tabContent">
+        <div
+          class="tab-pane fade show active"
+          id="nav-cambio1settings"
+          role="tabpanel"
+          aria-labelledby="nav-cambio1settings-tab"
+        >
+          <div class="row">
+            <div class="col-12">
+              <br />
+              <p>
+                En el <code>AppDelegate</code> cuando la aplicación se termina
+                de ser iniciada y cuando se vuelve a ella de estar activa se
+                tiene que agregar un método que actualice la interfaz visual
+                según el estado que tenga el usuario (dark o light) de la
+                siguiente manera <br /><br />
+              </p>
+
+              <div class="row">
+                <div class="col-lg-6">
+                  <p class="text-danger">
+                    Antes
+                  </p>
+
+                  <div class="card card-body codigoCard">
+                    <div class="w-100" style="overflow-x: scroll;">
+                      <img src="./imgs/cambios/settings_1.png" alt="" />
+                    </div>
+                    <hr />
+                    <img src="./imgs/cambios/settings_2.png" alt="" />
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <p class="text-danger">
+                    Después
+                  </p>
+                  <div class="card card-body codigoCard">
+                    <img src="./imgs/cambios/settings_2.png" alt="" />
+                    <hr />
+                    <img src="./imgs/cambios/settings_3.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="sugerenciasThreadsBug" class="sugerenciasDiv">
+      <div class="cerrar" id="cerrarSugerenciasThreadsBug">
+        <span style="font-size: 2rem;">&times;</span>
+      </div>
+      <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <a
+            class="nav-item nav-link active"
+            id="nav-cambioThread-tab"
+            data-toggle="tab"
+            href="#nav-cambioThread"
+            role="tab"
+            aria-controls="nav-cambioThread"
+            aria-selected="true"
+            >Cambio #1</a
+          >
+          <a
+            class="nav-item nav-link"
+            id="nav-cambioThread2-tab"
+            data-toggle="tab"
+            href="#nav-cambioThread2"
+            role="tab"
+            aria-controls="nav-cambioThread2"
+            aria-selected="true"
+            >Cambio #2</a
+          >
+        </div>
+      </nav>
+
+      <div class="tab-content" id="nav-tabContent">
+        <div
+          class="tab-pane fade show active"
+          id="nav-cambioThread"
+          role="tabpanel"
+          aria-labelledby="nav-cambioThread-tab"
+        >
+          <div class="row">
+            <div class="col">
+              <br />
+              <p>
+                La librería intenta llamar cosas que no es correcto llamar desde
+                otros threads diferentes al <b><code>main thread</code></b
+                >. Se recomienda añadir una parte del código para que no haya
+                problemas de <b>threading</b> que afectan al rendimiento ya que
+                se quedaba bloqueado al solicitar seleccionar una imagen.
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <h5 class="text-danger">Antes</h5>
+              <div class="card card-body codigoCard">
+                <img width="100%" src="./imgs/cambios/thread_1_1.png" alt="" />
+                <hr />
+                <img
+                  style="max-width: 236px; height: auto;"
+                  src="./imgs/cambios/thread_1_2.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <h5 class="text-success">Después</h5>
+              <div class="card card-body codigoCard">
+                <img width="100%" src="./imgs/cambios/thread_1_3.png" alt="" />
+                <hr />
+                <img width="100%" src="./imgs/cambios/thread_1_4.png" alt="" />
+                <hr />
+                <img width="100%" src="./imgs/cambios/thread_1_5.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="tab-pane fade"
+          id="nav-cambioThread2"
+          role="tabpanel"
+          aria-labelledby="nav-cambioThread2-tab"
+        >
+          <div class="row">
+            <div class="col">
+              <br />
+              <p>
+                Para abrir la cámara se presenta el mismo problema anterior por
+                lo que se recomiendan los siguientes cambios:
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <h5 class="text-danger">Antes</h5>
+              <div class="card card-body codigoCard">
+                <img src="./imgs/cambios/thread_2_1.png" alt="" />
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <h5 class="text-success">Después</h5>
+              <div class="card card-body codigoCard">
+                <img src="./imgs/cambios/thread_2_2.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div
       class="modal fade"
       id="staticBackdrop"
@@ -701,7 +2215,6 @@
     <div
       class="modal fade"
       id="funcAuthModal"
-      onclick="setScenes()"
       tabindex="-1"
       role="dialog"
       aria-labelledby="staticBackdropLabel"
@@ -883,6 +2396,409 @@
                   </div>
                 </div>
               </div>
+
+              <!-- comprobaciones auth -->
+              <div class="card">
+                <div class="card-header" id="authheadingFive">
+                  <h5 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed comp"
+                      data-toggle="collapse"
+                      data-target="#authcollapseFive"
+                      aria-expanded="true"
+                      aria-controls="authcollapseFive"
+                    >
+                      Comprobación #1
+                    </button>
+                  </h5>
+                </div>
+
+                <div
+                  id="authcollapseFive"
+                  class="collapse"
+                  aria-labelledby="authheadingFive"
+                  data-parent="#accordion"
+                >
+                  <div class="card-body">
+                    El número de teléfono está limitado a 25 caracteres y solo
+                    muestra el teclado numérico.<br /><br />
+
+                    <img class="w-100" src="./imgs/comps/1_1.png" />
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="authheadingSix">
+                  <h5 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed comp"
+                      data-toggle="collapse"
+                      data-target="#authcollapseSix"
+                      aria-expanded="true"
+                      aria-controls="authcollapseSix"
+                    >
+                      Comprobación #2
+                    </button>
+                  </h5>
+                </div>
+
+                <div
+                  id="authcollapseSix"
+                  class="collapse"
+                  aria-labelledby="authheadingSix"
+                  data-parent="#accordion"
+                >
+                  <div class="card-body">
+                    Si se presiona Done antes de realizar la confirmación de que
+                    no se es un bot se alerta al usuario.<br /><br />
+
+                    <img class="w-100" src="./imgs/comps/1_2.png" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ******************  -->
+    <!-- setting func modal -->
+    <!-- ****************** -->
+    <!-- ****************** -->
+
+    <div
+      class="modal fade"
+      id="funcSettingsModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h4>
+              ¿Cómo funciona la vista de configuración?
+            </h4>
+            <div id="settingsaccordion" class="accordion">
+              <div class="card">
+                <div class="card-header" id="settingsheadingOne">
+                  <h5 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed"
+                      data-toggle="collapse"
+                      data-target="#settingscollapseOne"
+                      aria-expanded="true"
+                      aria-controls="settingscollapseOne"
+                    >
+                      Paso #1
+                    </button>
+                  </h5>
+                </div>
+
+                <div
+                  id="settingscollapseOne"
+                  class="collapse show"
+                  aria-labelledby="settingsheadingOne"
+                  data-parent="#settingsaccordion"
+                >
+                  <div class="card-body">
+                    La clase <code>AccountSettingController</code> es la clase
+                    principal, contiene un <code>TableView</code> para mostrar
+                    todas las opciones. Se muestra el contenido dividido en dos
+                    secciones: La primera sección contiene todas las opciones
+                    posibles a editar por el usuario y la segunda sección solo
+                    contiene el botón de cerrar sesión. <br /><br />
+                    Es importante resaltar que se tiene un observador que está
+                    pendiente si hay algún cambio remoto en la base de datos y
+                    actualiza la casilla correspondiente en tiempo real.<br /><br />
+
+                    <img class="w-100" src="./imgs/how/5_1.png" />
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="settingsheadingTwo">
+                  <h5 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed"
+                      data-toggle="collapse"
+                      data-target="#settingscollapseTwo"
+                      aria-expanded="false"
+                      aria-controls="settingscollapseTwo"
+                    >
+                      ¿Cómo se puede cambiar la foto de perfil?
+                    </button>
+                  </h5>
+                </div>
+                <div
+                  id="settingscollapseTwo"
+                  class="collapse"
+                  aria-labelledby="settingsheadingTwo"
+                  data-parent="#settingsaccordion"
+                >
+                  <div class="card-body">
+                    Se usa la librería <code>AvatarOpener</code> para acceder a
+                    las fotos o tomar una foto nueva y posteriormente editarla.
+                    Para esto está la clase
+                    <code>AccountSettingsAvatarOpenerDelegate</code>
+                    <br /><br />
+                    Se guarda en <code>UserDefaults</code> la selección del
+                    usuario si desea tener que autenticarse con Código, TouchID
+                    o FaceID según sea el caso. <br /><br />
+                    <img class="w-100" src="./imgs/how/5_2.png" />
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="settingsheadingThree">
+                  <h5 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed"
+                      data-toggle="collapse"
+                      data-target="#settingscollapseThree"
+                      aria-expanded="false"
+                      aria-controls="settingscollapseThree"
+                    >
+                      ¿Cómo borrar caché y datos temporales?
+                    </button>
+                  </h5>
+                </div>
+                <div
+                  id="settingscollapseThree"
+                  class="collapse"
+                  aria-labelledby="settingsheadingThree"
+                  data-parent="#settingsaccordion"
+                >
+                  <div class="card-body">
+                    Para borrar los documentos y todos temporales se usa el
+                    método <code>FileManager.default.clearTemp()</code>
+                    <br /><br />
+                    Para borrar el caché se llama a la librería
+                    <code>SDWebImage</code> la cual tiene el método
+                    <code>clearDisk()</code> y <code>clearMemory()</code> que
+                    ayudan a eliminar todo el caché.
+                    <img src="./imgs/how/5_3.png" alt="" class="w-100" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ****************** -->
+    <!--  lista chats  func  modal -->
+    <!-- ****************** -->
+    <!-- ****************** -->
+
+    <div
+      class="modal fade"
+      id="funcchatsModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h4>
+              ¿Cómo funciona la vista de lista de chats?
+            </h4>
+            <div id="chataccordion" class="accordion">
+              <div class="card">
+                <div class="card-header" id="chatheadingOne">
+                  <h5 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed"
+                      data-toggle="collapse"
+                      data-target="#chatcollapseOne"
+                      aria-expanded="true"
+                      aria-controls="chatcollapseOne"
+                    >
+                      Paso #1
+                    </button>
+                  </h5>
+                </div>
+
+                <div
+                  id="chatcollapseOne"
+                  class="collapse show"
+                  aria-labelledby="chatheadingOne"
+                  data-parent="#chataccordion"
+                >
+                  <div class="card-body">
+                    Para mostrar la lista de chats se usa un table view
+                    configurado en la clase
+                    <code>ChatsTableViewController</code> - Se tiene un
+                    observador que está escuchando el tema actual que tiene el
+                    usuario.<br /><br />
+
+                    <img class="w-100" src="./imgs/how/6_1.png" />
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="chatheadingTwo">
+                  <h5 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed"
+                      data-toggle="collapse"
+                      data-target="#chatcollapseTwo"
+                      aria-expanded="false"
+                      aria-controls="chatcollapseTwo"
+                    >
+                      Paso #2
+                    </button>
+                  </h5>
+                </div>
+                <div
+                  id="chatcollapseTwo"
+                  class="collapse"
+                  aria-labelledby="chatheadingTwo"
+                  data-parent="#chataccordion"
+                >
+                  <div class="card-body">
+                    Al iniciar se usa el método
+                    <code>fetchConversations()</code> de la clase
+                    <code>ConversationsFetcher</code> para recuperar todas la
+                    conversaciones del usuario - Para mantener las
+                    conversaciones actualizadas se usa el protocolo
+                    <code>ConversationUpdatesDelegate</code> <br /><br />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ****************** -->
+    <!--  chatinging func  modal -->
+    <!-- ****************** -->
+    <!-- ****************** -->
+
+    <div
+      class="modal fade"
+      id="funcchatingModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h4>
+              ¿Cómo funciona la vista de chating?
+            </h4>
+            <div id="chatingaccordion" class="accordion">
+              <div class="card">
+                <div class="card-header" id="chatingheadingOne">
+                  <h5 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed"
+                      data-toggle="collapse"
+                      data-target="#chatingcollapseOne"
+                      aria-expanded="true"
+                      aria-controls="chatingcollapseOne"
+                    >
+                      ¿Cómo recupera el estado?
+                    </button>
+                  </h5>
+                </div>
+
+                <div
+                  id="chatingcollapseOne"
+                  class="collapse show"
+                  aria-labelledby="chatingheadingOne"
+                  data-parent="#chatingaccordion"
+                >
+                  <div class="card-body">
+                    Para cargar los mensajes anteriores del chat, se usa la
+                    clase <code>ChatLogHistoryFetcher</code> que tiene el método
+                    <code>loadPreciousMessages</code>.<br /><br />
+
+                    <img class="w-100" src="./imgs/how/7_1.png" />
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="chatingheadingTwo">
+                  <h5 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed"
+                      data-toggle="collapse"
+                      data-target="#chatingcollapseTwo"
+                      aria-expanded="false"
+                      aria-controls="chatingcollapseTwo"
+                    >
+                      ¿Cómo genera el efecto onda al grabar audios?
+                    </button>
+                  </h5>
+                </div>
+                <div
+                  id="chatingcollapseTwo"
+                  class="collapse"
+                  aria-labelledby="chatingheadingTwo"
+                  data-parent="#chatingaccordion"
+                >
+                  <div class="card-body">
+                    Para mostrar la grabación de voz se utiliza una onda
+                    mediante la clase <code>SwiftSiriWaveFormView</code> que se
+                    encuentra en Support/WaveformView. Ésta es una adaptación
+                    del repositorio:
+                    <a
+                      href="https://github.com/stefanceriu/SCSiriWaveformView"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >github.com/stefanceriu/SCSiriWaveformView</a
+                    >
+                    . En general es una implementación de una onda parecida a la
+                    que aparece cuando se usa Siri, la cual cambia la amplitud
+                    según el nivel de la voz. <br /><br />
+                    <img class="w-100" src="./imgs/how/7_2.png" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header" id="chatingheadingThree">
+                  <h5 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed"
+                      data-toggle="collapse"
+                      data-target="#chatingcollapseThree"
+                      aria-expanded="false"
+                      aria-controls="chatingcollapseThree"
+                    >
+                      ¿Cómo se envía un mensaje?
+                    </button>
+                  </h5>
+                </div>
+                <div
+                  id="chatingcollapseThree"
+                  class="collapse"
+                  aria-labelledby="chatingheadingThree"
+                  data-parent="#chatingaccordion"
+                >
+                  <div class="card-body">
+                    Para el envío de mensajes se tiene la clase
+                    <code>MessageSender</code>, la cual principalmente tiene
+                    métodos de: <code>sendTextMessage()</code>,
+                    <code>sendPhotoMessage()</code> y
+                    <code>sendVideoMessage()</code> para el envío de los
+                    diferentes tipos de mensajes. <br /><br />
+                    Se selecciona el tipo de celda según si el archivo media se
+                    seleccionó es una imagen o no.<br /><br />
+                    <img class="w-100" src="./imgs/how/7_3.png" /> <br /><br />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -892,7 +2808,6 @@
     <div
       class="modal fade"
       id="funcContactsModal"
-      onclick="setScenes()"
       tabindex="-1"
       role="dialog"
       aria-labelledby="staticBackdropLabel"
@@ -909,7 +2824,7 @@
                 <div class="card-header" id="contactsheadingOne">
                   <h5 class="mb-0">
                     <button
-                      class="btn btn-link"
+                      class="btn btn-link collapsed"
                       data-toggle="collapse"
                       data-target="#contactscollapseOne"
                       aria-expanded="true"
@@ -1001,11 +2916,83 @@
                     <code>ContactsController + SearchHandlers</code> para
                     manejar la búsqueda en tiempo real filtrando los usuarios
                     que se muestran en cada sección del table view. <br /><br />
-                    <img src="./imgs/how/2_3.png" alt="" class="w-100" />
+                    <img src="./imgs/how/4_3.png" alt="" class="w-100" />
                     <br /><br />
                     Si el contacto si está registrado en falcon se accederá a la
                     parte de chat con el contacto que se explicará
                     posteriormente.
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header" id="contactsheadingFour">
+                  <h5 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed"
+                      data-toggle="collapse"
+                      data-target="#contactscollapseFour"
+                      aria-expanded="false"
+                      aria-controls="contactscollapseFour"
+                    >
+                      Paso #4
+                    </button>
+                  </h5>
+                </div>
+                <div
+                  id="contactscollapseFour"
+                  class="collapse"
+                  aria-labelledby="contactsheadingFour"
+                  data-parent="#contactsaccordion"
+                >
+                  <div class="card-body">
+                    Para el manejo de las celdas, se sobrescribe el método
+                    prepareForReuse para asegurar que todas las celdas
+                    reutilizadas tengan los colores que se requiere para el tema
+                    actual. <br /><br />
+                    <img src="./imgs/how/4_4.png" alt="" class="w-100" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header" id="contactsheadingComp1">
+                  <h5 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed comp"
+                      data-toggle="collapse"
+                      data-target="#contactscollapseComp1"
+                      aria-expanded="true"
+                      aria-controls="contactscollapseComp1"
+                    >
+                      Comprobación #1
+                    </button>
+                  </h5>
+                </div>
+
+                <div
+                  id="contactscollapseComp1"
+                  class="collapse"
+                  aria-labelledby="contactsheadingComp1"
+                  data-parent="#contactsaccordion"
+                >
+                  <div class="card-body">
+                    Cuando se van a sincronizar los contactos se comprueba
+                    primero si hay permiso del usuario para acceder a los
+                    contactos del teléfono.
+                    <br /><br />
+
+                    <img class="w-100" src="./imgs/comps/2_1.png" />
+
+                    <br /><br />
+
+                    Cuando no se tiene permitido el acceso a los contactos se
+                    muestra un mensaje mostrando el problema que se tiene y cómo
+                    solucionarlo.
+
+                    <br /><br />
+
+                    <img class="w-100" src="./imgs/comps/2_2.png" />
                   </div>
                 </div>
               </div>
@@ -1021,7 +3008,6 @@
     <div
       class="modal fade"
       id="funcConnModal"
-      onclick="setScenes()"
       tabindex="-1"
       role="dialog"
       aria-labelledby="staticBackdropLabel"
@@ -1103,6 +3089,142 @@
         </div>
       </div>
     </div>
+
+    <!-- ******************* -->
+    <!-- Antipatron    Modal -->
+    <!-- ******************* -->
+
+    <div
+      class="modal fade"
+      id="antipatron1Modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content antipatronModal">
+          <h1 class="tape">
+            <span></span>
+          </h1>
+          <div class="modal-body">
+            Cuando el número de teléfono es demasiado largo o demasiado corto y
+            se continúa con el proceso de autenticación la aplicación muestra
+            una alerta pero no es clara y después de cerrarla no se puede editar
+            el número de teléfono. <br /><br />
+            <div class="mx-auto w-100">
+              <img src="./imgs/antipatrones/1_1.png" class="w-100" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ******************* -->
+    <!-- Registro Exception Modal -->
+    <!-- ******************* -->
+
+    <div
+      class="modal fade"
+      id="ex1Modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header" style="background-color: #ed3833;">
+            <h5 class="modal-title">Error fatal al cargar imágenes</h5>
+          </div>
+          <div class="modal-body">
+            El fallo se presenta cuando el usuario intenta editar su foto de
+            perfil, ya sea por cámara o desde su galería de imágenes. Esto se da
+            por un error al manejar los distintos <b>Threads</b> involucrados en
+            la tarea. Aquí se muestra la vista bloqueada que percibe el usuario
+            en esta situación <br />
+            <div class="mx-auto w-100">
+              <div id="inner_wrap">
+                <div id="wrapper" style="perspective: 1300px;">
+                  <div
+                    class="phone view_2"
+                    id="phone_ex_1"
+                    style="width: 212px; height: 460px; overflow-y: scroll;"
+                  >
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="row">
+                          <div class="col-12">
+                            <img
+                              id="img_phone3"
+                              src="./imgs/ex/ex_pic_1.gif"
+                              style="width: 200px;"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <br />
+
+            Adcionalmente, investigamos las posibles causas y la solución del
+            fallo. Esta información la puede encontrar en la sección de Threads
+            siguiente este
+            <a
+              href="#performanceSeccion"
+              class="text-danger"
+              id="abrirThreadsDesdeEx"
+              >enlace</a
+            >.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ******************* -->
+    <!-- Chatting Exception Modal -->
+    <!-- ******************* -->
+
+    <div
+      class="modal fade"
+      id="ex2Modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header" style="background-color: #ed3833;">
+            <h5 class="modal-title">Error fatal al cargar imágenes</h5>
+          </div>
+          <div class="modal-body">
+            Los mensajes se guardan en Firebase sin ningún tipo de
+            <b class="text-danger">encriptación</b>, esto es un problema grave
+            de seguridad y privacidad ya que si alguien accede a la base de
+            datos puede ver las conversaciones de todos los usuarios.
+            <br /><br />
+
+            Además, resulta interesante que una de las funcionalidades
+            principales de Firebase es el almacenamiento temporal sin conexión;
+            sin embargo, no hacen uso de éste para visualizar el envío de
+            mensajes sin conexión. Cuando no se tiene conexión no es posible
+            enviar los mensajes. Es decir, la aplicación impide la función lo
+            cual debería ser manejado de m ejor manera.
+            <div class="mx-auto w-100">
+              <br />
+              <img src="./imgs/ex/ex_2_1.png" class="w-100" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script
       src="https://code.jquery.com/jquery-2.2.0.min.js"
       type="text/javascript"
@@ -1129,5 +3251,6 @@
     <script src="./videoplayer.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
     <script src="./phoneScrollByStepsController.js"></script>
+    <script src="./ss_ss.js"></script>
   </body>
 </html>

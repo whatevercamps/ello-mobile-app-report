@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="col-4">
+    <img src="./imgs/distr/settings.png" class="w-100" alt="" />
+  </div>
+  <div class="col-8">
+    <p>
+      En esta vista se pueden editar las distintas preferencias del usuario, la
+      clase principal es AccountSettingsController. Las siguientes clases de
+      AccountSettings hacen referencia a los controles de edición del nombre,
+      imagen y biografía. Posteriormente se encuentra la sub carpeta “Menu” la
+      cual contiene las carpetas:
+    </p>
+    <ul>
+      <li>
+        Model: Para el manejo del modelo de ingreso a la aplicación cuando se
+        usa FaceID o TouchID
+      </li>
+      <li>
+        Support: Contiene los switch table view en la que se agrupa una
+        plantilla general de privacidad y notificaciones ya que estas contienen
+        ToggleButtons.
+      </li>
+      <li>
+        NotificationsAndSounds: Contiene los controladores para control de
+        notificaciones
+      </li>
+      <li>
+        PrivacyAndSecurity: Contiene los controladores para activar o no el
+        FaceID/TouchID
+      </li>
+      <li>
+        ChangeNumber: Llama al controlador de autenticación para hacer todo el
+        proceso de cambiar número con verificación por SMS.
+      </li>
+      <li>
+        Storage: Contiene los controladores para borrar caché y documentos
+        temporales si el usuario lo desea.
+      </li>
+    </ul>
+  </div>
+</div>
